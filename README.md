@@ -2,31 +2,31 @@
 
 ## Table of Contents
 
-* [Overview](#overview)
-* [General Instructions](#general-instructions)
-* [Initial Setup](#initial-setup)
-* [Project Workflow](#project-workflow)
-* [Requirements & Specifications](#requirements-specifications)
-* [Team Documents](#team-documents)
-* [Tech Stack](#technology-stack)
-* [Our Team](#our-team)
-* [Acknowledgements](#acknowledgements)
-* [About Chingu](#about-chingu)
+- [Overview](#overview)
+- [General Instructions](#general-instructions)
+- [Initial Setup](#initial-setup)
+- [Project Workflow](#project-workflow)
+- [Requirements & Specifications](#requirements-specifications)
+- [Team Documents](#team-documents)
+- [Tech Stack](#technology-stack)
+- [Our Team](#our-team)
+- [Acknowledgements](#acknowledgements)
+- [About Chingu](#about-chingu)
 
 ## Overview
 
-Hey there! How about we create an app all about dinosaurs? We've got our data all 
+Hey there! How about we create an app all about dinosaurs? We've got our data all
 set from the National History Museum that tells us about different dinosaurs.
 
-Imagine our app like a dino world! We can show all kinds of dinosaurs – big ones 
-looking for food, calm ones eating plants, and even tiny ones running around. From 
+Imagine our app like a dino world! We can show all kinds of dinosaurs – big ones
+looking for food, calm ones eating plants, and even tiny ones running around. From
 huge dinosaurs that made the ground shake to little ones in the forests.
 
-And get this, our tool might even let us time-travel! Imagine going back in time to 
-see how these dinosaurs lived. Plus, it tells us what type of dinosaur it is and 
+And get this, our tool might even let us time-travel! Imagine going back in time to
+see how these dinosaurs lived. Plus, it tells us what type of dinosaur it is and
 where it used to call home. So, you'll get to know dinosaurs from all over the place.
 
-We're thinking of adding a cool twist – using News data to show you the latest 
+We're thinking of adding a cool twist – using News data to show you the latest
 discoveries about dinosaurs. Pretty cool, huh?
 
 Let's make an app that's not just smart but also super fun for everyone!
@@ -45,8 +45,8 @@ Let's make an app that's not just smart but also super fun for everyone!
 
 ![Dinosaurs Example BarChart](./assets/dino-chart-bar.png)
 
-Your Chingu Voyage team will be using this data to create an web app that will help 
-anyone interested to be able to “dig” into the fossil data and discover facts 
+Your Chingu Voyage team will be using this data to create an web app that will help
+anyone interested to be able to “dig” into the fossil data and discover facts
 about dinosaurs in a unique way. Your app will summarize this data and will allow
 users to apply a single filter to multiple visualizations simultaneously.
 
@@ -67,8 +67,8 @@ extend it in ways we haven't envisioned. In other words, use the power of
 teamwork to make it distinctive and unique.
 
 Take note that we haven't given specific direction on what your UI/UX should
-look like. This is another area where you and your team can put your creativity 
-to work! 
+look like. This is another area where you and your team can put your creativity
+to work!
 
 ## Initial Setup
 
@@ -83,7 +83,7 @@ to work!
 
 ## Project Workflow
 
-1. Always create a new branch for your work. Use one of the four basic types of branches (bug, feature, refactor, and style), or another type with the relevant keyword,  to start with your branch's name. For example: `git checkout -b 'feature/welcome-page'`
+1. Always create a new branch for your work. Use one of the four basic types of branches (bug, feature, refactor, and style), or another type with the relevant keyword, to start with your branch's name. For example: `git checkout -b 'feature/welcome-page'`
 
 - Ensure your branch is up to date before pushing any changes
   `git pull origin <branch name>` (branch name should be "development" depending on your situation)
@@ -111,14 +111,14 @@ implement to enhance this app, if time permits.
 
 #### Structure
 
-- [ ] This is a purely frontend application. No backend is required. 
-- [ ] You may use any languages, tools, or libraries you prefer when designing and building this app. 
+- [ ] This is a purely frontend application. No backend is required.
+- [ ] You may use any languages, tools, or libraries you prefer when designing and building this app.
 - [ ] Utilize the provided Dinosaur's API to display data.
 - [ ] You may **_NOT_** use AI-base solution generators like GitHub CoPilot.
 - [ ] Useful links and resources:
-    - [National History Museum](https://www.nhm.ac.uk/discover/dinosaurs.html)
-    - [Dinosaurs API](https://chinguapi.onrender.com/dinosaurs)
-    - [NewsAPI](https://newsapi.org/)
+  - [National History Museum](https://www.nhm.ac.uk/discover/dinosaurs.html)
+  - [Dinosaurs API](https://chinguapi.onrender.com/dinosaurs)
+  - [NewsAPI](https://newsapi.org/)
 
 #### Styling
 
@@ -129,64 +129,73 @@ implement to enhance this app, if time permits.
 
 #### Functionality
 
--   Overview:
-    - [ ] A single-page application (SPA) or it's equivalent design to provide users with an immersive experience in exploring dinosaurs through a user-friendly interface.
+- Overview:
+
+  - [ ] A single-page application (SPA) or it's equivalent design to provide users with an immersive experience in exploring dinosaurs through a user-friendly interface.
 
 - Dinosaur Display
-    - [ ] Display dinosaurs' name, weight, length, country, diet and corresponding images sourced from the provided API data.
-    - [ ] Each dinosaur entry should be clickable to view full details.
+
+  - [ ] Display dinosaurs' name, weight, length, country, diet and corresponding images sourced from the provided API data.
+  - [ ] Each dinosaur entry should be clickable to view full details.
 
 - Search Component
-    - [ ] Implement a search feature allowing users to search for dinosaurs by name, weight, length, country and diet.
-    - [ ] Search results should dynamically filter and sort dinosaurs based on the entered data (name, weight, length, country, diet).
+
+  - [ ] Implement a search feature allowing users to search for dinosaurs by name, weight, length, country and diet.
+  - [ ] Search results should dynamically filter and sort dinosaurs based on the entered data (name, weight, length, country, diet).
 
 - Diet Chart Visualization
-    - [ ] Display two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diet and type data.
-    - [ ] Ensure the chart is visually appealing and informative, providing a clear overview of diet composition.
+
+  - [ ] Display two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diet and type data.
+  - [ ] Ensure the chart is visually appealing and informative, providing a clear overview of diet composition.
 
 - Dinosaur Location Map
-    - [ ] Display the location of a selected dinosaur on a map.
-    - [ ] Upon clicking a dinosaur entry, dynamically fetch and display its geographic location on an interactive map using a mapping API (e.g., Google Maps).
+
+  - [ ] Display the location of a selected dinosaur on a map.
+  - [ ] Upon clicking a dinosaur entry, dynamically fetch and display its geographic location on an interactive map using a mapping API (e.g., Google Maps).
 
 - Dinosaur Details View
-    - [ ] Enable users to view full details of a selected dinosaur upon clicking its entry.
-    - [ ] Details should include additional information sourced from the API data such as: 
-        - name
-        - imageSrc
-        - typeOfDinosaur
-        - length
-        - diet
-        - whenLived
-        - typeSpecies
-        - description
-        - foundIn 
-        - taxonomy
-        - namedBy
+
+  - [ ] Enable users to view full details of a selected dinosaur upon clicking its entry.
+  - [ ] Details should include additional information sourced from the API data such as:
+    - name
+    - imageSrc
+    - typeOfDinosaur
+    - length
+    - diet
+    - whenLived
+    - typeSpecies
+    - description
+    - foundIn
+    - taxonomy
+    - namedBy
 
 - Responsiveness
-    - [ ] Ensure the web application is responsive and accessible across various devices and screen sizes.
-    - [ ] Utilize responsive design techniques to adapt to different viewport sizes.
-    
+  - [ ] Ensure the web application is responsive and accessible across various devices and screen sizes.
+  - [ ] Utilize responsive design techniques to adapt to different viewport sizes.
+
 ### Extras (Not Required)
+
 - Display news about recent dinosaur discovery
-    - [ ] Consume a second API that's related to Dinosaur
+  - [ ] Consume a second API that's related to Dinosaur
 
 ## Acceptance Criteria
+
 - Search Functionality
-    - [ ] Users should be able to search for dinosaurs by name, weight, length, country and diet.
-    - [ ] Search results must dynamically filter displayed dinosaurs based on the entered name, weight, length, country and diet.
-    - [ ] Search functionality should be case-insensitive and allow partial matching of dinosaur names.
+
+  - [ ] Users should be able to search for dinosaurs by name, weight, length, country and diet.
+  - [ ] Search results must dynamically filter displayed dinosaurs based on the entered name, weight, length, country and diet.
+  - [ ] Search functionality should be case-insensitive and allow partial matching of dinosaur names.
 
 - Diet Chart Visualization
-    - [ ] The app must display two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diets (e.g., herbivore, carnivore, omnivore) and type based on provided data.
-    - [ ] The charts must accurately represent the proportion of each diet type within the dataset.
-    - [ ] Users should be able to easily interpret and interact with the chart to understand diet composition.
+
+  - [ ] The app must display two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diets (e.g., herbivore, carnivore, omnivore) and type based on provided data.
+  - [ ] The charts must accurately represent the proportion of each diet type within the dataset.
+  - [ ] Users should be able to easily interpret and interact with the chart to understand diet composition.
 
 - Dinosaur Details View
-    - [ ] Upon clicking a dinosaur entry, users must be able to view full details of the selected dinosaur.
-    - [ ] Dinosaur details should include notable characteristics sourced from the API data.
-    - [ ] The details view should be accessible and provide comprehensive information about the selected dinosaur.
-
+  - [ ] Upon clicking a dinosaur entry, users must be able to view full details of the selected dinosaur.
+  - [ ] Dinosaur details should include notable characteristics sourced from the API data.
+  - [ ] The details view should be accessible and provide comprehensive information about the selected dinosaur.
 
 ## Team Documents
 
@@ -206,21 +215,22 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 
 The core technologies used in this project:
 
- - React
- - ViteJS
- - Bootstrap
+- React
+- ViteJS
+- Bootstrap
 
 ## Our Team
 
 Everyone on your team should add their name along with a link to their GitHub
 & optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
+your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 - Teammate name #1: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 
-   ...
+  ...
+
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 
 ## Acknowledgements
@@ -229,6 +239,6 @@ We acknowledge the [National History Museum](https://www.nhm.ac.uk) for providin
 
 ## About Chingu
 
-If you aren’t yet a member of Chingu we invite you to join us. We help our 
-members transform what they’ve learned in courses & tutorials into the 
+If you aren’t yet a member of Chingu we invite you to join us. We help our
+members transform what they’ve learned in courses & tutorials into the
 practical experience employers need and want.

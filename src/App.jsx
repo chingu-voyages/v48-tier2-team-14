@@ -1,9 +1,9 @@
 import "./App.css";
-import MyResponsivePieCanvas from "./components/MyResponsivePieCanvas";
-import "./styles/PieChart.css";
-import data from "./data";
+import "./styles/Charts.css";
+import { data, data2 } from "./data";
 import { useEffect } from "react";
 import PieChart from "./components/PieChart";
+import DonutChart from "./components/DonutChart";
 
 function App() {
   useEffect(() => {
@@ -15,7 +15,9 @@ function App() {
       <div className="pie-chart">
         <PieChart data={data} />
       </div>
-      {/* <MyResponsivePieCanvas data={data} />  */}
+      <div className="donut-chart">
+        <DonutChart data={data2} />
+      </div>
     </>
   );
 }

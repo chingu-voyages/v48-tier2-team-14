@@ -4,7 +4,7 @@ import React from "react";
 const PieChart = ({ data }) => {
   return (
     <>
-      <h1>Pie Chart</h1>
+      <h1>Distribution of General Dinosaur Diets</h1>
       <Pie
         data={data}
         width={500}
