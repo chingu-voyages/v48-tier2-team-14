@@ -1,5 +1,11 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+const customIcon = new L.Icon({
+  iconUrl: "/assets/dino-print.png",
+  iconSize: [30, 30],
+});
 
 function Map({ dinosaurLocation, dinosaurName, dinosaurImage }) {
   return (
@@ -14,7 +20,7 @@ function Map({ dinosaurLocation, dinosaurName, dinosaurImage }) {
           url="https://api.maptiler.com/maps/topo-v2/{z}/{x}/{y}.png?key=UO8c2dxT8Xs4hzn7JgSo"
         />
         {dinosaurLocation && (
-          <Marker position={dinosaurLocation}>
+          <Marker position={dinosaurLocation} icon={customIcon}>
             <Popup maxWidth="100%" maxHeight="auto">
               <h3>{dinosaurName}</h3>
               <div className="img-container">
