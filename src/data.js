@@ -120,8 +120,6 @@ let data2 = [
   },
 ];
 
-console.log(data2);
-
 const data = [
   {
     id: "carnivorous",

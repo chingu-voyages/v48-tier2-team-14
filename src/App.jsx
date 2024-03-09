@@ -6,9 +6,6 @@ import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 
 function App() {
-  useEffect(() => {
-    console.log(data);
-  }, []);
   return (
     <>
       <h1>Chingu Voyage 48: Tier 2 Team 14</h1>
