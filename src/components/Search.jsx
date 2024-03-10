@@ -1,14 +1,11 @@
-import { useContext } from 'react'
-import { AppContext } from '../context/Context'
+import { useContext } from "react";
+import { AppContext } from "../context/Context";
 
 function Search() {
-
   const { data } = useContext(AppContext);
 
-	console.log(data);
+  // console.log(data);
 
-  return (
-    <div>Search Bar</div>
-  )
+  return <div>Search Bar</div>;
 }
-export default Search
+export default Search;

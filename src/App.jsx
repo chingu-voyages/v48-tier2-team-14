@@ -16,11 +16,7 @@ function App() {
     <AppProvider>
       <h1>Chingu Voyage 48: Tier 2 Team 14</h1>
       <Search />
-      <Map
-        dinosaurLocation={[60, -95]}
-        dinosaurName="Albertosaurus"
-        dinosaurImage="https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/albert.jpg"
-      />
+      <Map dinosaurLocation="Argentina" />
       <div className="pie-chart">
         <PieChart data={data} />
       </div>
