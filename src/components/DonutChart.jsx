@@ -1,12 +1,14 @@
 import { ResponsivePieCanvas } from "@nivo/pie";
-import React from "react";
+import DataComponent from "../data"
 
-const DonutChart = ({ data }) => {
+const DonutChart = () => {
+const { data2 } = DataComponent();
+
   return (
     <>
       <h1>Type of Dinasour</h1>
       <ResponsivePieCanvas
-        data={data}
+        data={data2}
         margin={{ top: 40, right: 200, bottom: 40, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}

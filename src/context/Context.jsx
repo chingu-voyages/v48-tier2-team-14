@@ -2,7 +2,6 @@ import { createContext, useState, useEffect } from "react";
 import { getFetchData } from '../global/utils.js'
 import LoadingPage from '../components/LoadingPage'
 
-
 const AppContext = createContext();
 const DINO_API_URL = "https://chinguapi.onrender.com/dinosaurs";
 

@@ -1,12 +1,14 @@
 import { Pie } from "@nivo/pie";
-import React from "react";
+import DataComponent from '../data'
 
-const PieChart = ({ data }) => {
+const PieChart = () => {
+const { data1 } = DataComponent();
+
   return (
     <>
       <h1>Distribution of General Dinosaur Diets</h1>
       <Pie
-        data={data}
+        data={data1}
         width={500}
         height={500}
         margin={{ top: 0, right: 200, bottom: 40, left: 80 }}
