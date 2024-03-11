@@ -9,6 +9,7 @@ import { AppProvider } from "./context/Context";
 import Search from "./components/Search";
 import Map from "./components/Map";
 import DinosaurDisplay from "./components/DinosaurDisplay";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 				<DonutChart data={data2} />
 			</div>
 			<DinosaurDisplay />
+			<Footer />
 		</AppProvider>
 	);
 }
