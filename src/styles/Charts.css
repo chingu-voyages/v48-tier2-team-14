@@ -1,21 +1,29 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .pie-chart {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 2rem;
-  top: 10rem;
+	display: flex;
+	flex-direction: column;
+	/* position: absolute; */
+	right: 2rem;
+	top: 10rem;
+
+	/* Test styling */
+	width: 50vw;
+	height: 400px;
 }
 
 .donut-chart {
-  width: 700px;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 2rem;
-  top: 10rem;
+	/* width: 700px; */
+	/* height: 700px; */
+	display: flex;
+	flex-direction: column;
+	/* position: absolute; */
+	left: 2rem;
+	top: 10rem;
+
+	/* Test styling */
+	width: 50vw;
+	height: 400px;
 }
