@@ -15,7 +15,10 @@ const AppProvider = ({ children }) => {
 			try {
 				const responseData = await getFetchData(DINO_API_URL);
 				const halfData = responseData.slice(0, responseData.length / 2);
-				setData(responseData);
+				const thirdData = responseData.slice(0, responseData.length / 3);
+				//setData(responseData);
+				//setData(halfData);
+				setData(thirdData);
 				setTimeout(() => {
 					setLoading(false);
 				}, 2000); // Set loading page duration to 2 seconds
