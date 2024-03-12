@@ -1,8 +1,8 @@
 import "./App.css";
 import "./styles/Charts.css";
 import "./styles/LoadingPage.css";
+import "./styles/Map.css";
 import { data, data2 } from "./data";
-//import { useEffect } from "react";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
@@ -14,48 +14,35 @@ import Footer from "./components/Footer";
 function App() {
 	return (
 		<AppProvider>
-			<div className="container-fluid">
-				<div className="row">
-					<div className="col-md-8">
-						<h1 className="display-1">Dino Studio</h1>
-					</div>
-					<div className="col-md-4"></div>
-				</div>
-				<div className="row">
-					<div className="col-md-12" id="searchBar">
-						<Search />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-md-12">
-						<Map />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-md-1"></div>
-					<div className="col-md-4">
-						<div className="pie-chart">
-							<PieChart data={data} />
-						</div>
-					</div>
-					<div className="col-md-6">
-						<div className="donut-chart">
-							<DonutChart data={data2} />
-						</div>
-					</div>
-					<div className="col-md-1"></div>
-				</div>
-				<div className="row">
-					<div className="col-md-12">
-						<DinosaurDisplay />
-					</div>
-				</div>
+			<h1>Chingu Voyage 48: Tier 2 Team 14</h1>
+			<Search />
+			<Map
+				selectedDinosaur={{
+					id: 24,
+					name: "Antarctosaurus",
+					imageSrc:
+						"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/antarcto.jpg",
+					typeOfDinosaur: "sauropod",
+					length: 18,
+					weight: "N/A",
+					diet: "herbivorous",
+					whenLived: "Late Cretaceous, 84 million years ago",
+					foundIn: "Argentina, Chile, Uruguay",
+					taxonomy:
+						"Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Neosauropoda, Macronaria, Camarasauromorpha, Titanosauriformes, Titanosauria, Lithostrotia",
+					namedBy: "von Huene (1929)",
+					typeSpecies: "wichmannianus",
+					description: "N/A",
+				}}
+			/>
+			<div className="pie-chart">
+				<PieChart data={data} />
 			</div>
-			<div className="container">
-				<footer className="footer">
-					<Footer />
-				</footer>
+			<div className="donut-chart">
+				<DonutChart data={data2} />
 			</div>
+			<DinosaurDisplay />
+			<Footer />
 		</AppProvider>
 	);
 }
