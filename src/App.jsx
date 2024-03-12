@@ -16,7 +16,25 @@ function App() {
     <AppProvider>
       <h1>Chingu Voyage 48: Tier 2 Team 14</h1>
       <Search />
-      <Map dinosaurLocation="Argentina" />
+      <Map
+        selectedDinosaur={{
+          id: 24,
+          name: "Antarctosaurus",
+          imageSrc:
+            "https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/antarcto.jpg",
+          typeOfDinosaur: "sauropod",
+          length: 18,
+          weight: "N/A",
+          diet: "herbivorous",
+          whenLived: "Late Cretaceous, 84 million years ago",
+          foundIn: "Argentina, Chile, Uruguay",
+          taxonomy:
+            "Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Neosauropoda, Macronaria, Camarasauromorpha, Titanosauriformes, Titanosauria, Lithostrotia",
+          namedBy: "von Huene (1929)",
+          typeSpecies: "wichmannianus",
+          description: "N/A",
+        }}
+      />
       <div className="pie-chart">
         <PieChart data={data} />
       </div>

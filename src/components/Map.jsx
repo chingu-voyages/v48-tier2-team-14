@@ -1,8 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useContext, useEffect, useState } from "react";
-import { AppContext } from "../context/Context";
+import { useEffect, useState } from "react";
 import { getLocationCoordinates } from "../global/utils";
 
 const customIcon = new L.Icon({
@@ -10,31 +9,45 @@ const customIcon = new L.Icon({
   iconSize: [30, 30],
 });
 
-function Map({ dinosaurLocation }) {
-  const { data } = useContext(AppContext);
-  // console.log(data);
-
-  const [locationCoordinates, setLocationCoordinates] = useState([0, 0]);
+function Map({ selectedDinosaur }) {
+  const [locationCoordinates, setLocationCoordinates] = useState([]);
 
   useEffect(() => {
     const getCoordinates = async () => {
       try {
-        const coordinates = await getLocationCoordinates(dinosaurLocation);
-        setLocationCoordinates(coordinates);
-        // console.log(coordinates);
+        if (typeof selectedDinosaur.foundIn === "string") {
+          const locations = selectedDinosaur.foundIn
+            .split(",")
+            .map((location) => location.trim());
+
+          const coordinatesPromises = locations.map(async (location) => {
+            const coordinates = await getLocationCoordinates(location);
+            return { location, coordinates };
+          });
+
+          const locationsWithCoordinates = await Promise.all(
+            coordinatesPromises
+          );
+          setLocationCoordinates(locationsWithCoordinates);
+        } else {
+          console.error("FoundIn is not a string:", selectedDinosaur.foundIn);
+        }
       } catch (error) {
         console.error("Unable to get Coordinates", error);
       }
     };
-    if (dinosaurLocation) {
+
+    if (selectedDinosaur.foundIn) {
       getCoordinates();
     }
-  }, [dinosaurLocation]);
+  }, [selectedDinosaur]);
+
+  console.log("Location coordinates:", locationCoordinates);
 
   return (
     <div className="map-container">
       <MapContainer
-        center={locationCoordinates}
+        center={[0, 0]}
         zoom={2}
         style={{ height: "700px", width: "full" }}
       >
@@ -42,22 +55,23 @@ function Map({ dinosaurLocation }) {
           attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
           url="https://api.maptiler.com/maps/topo-v2/{z}/{x}/{y}.png?key=UO8c2dxT8Xs4hzn7JgSo"
         />
-        {locationCoordinates && (
-          <Marker position={locationCoordinates} icon={customIcon}>
+        {locationCoordinates.map(({ location, coordinates }) => (
+          <Marker key={location} position={coordinates} icon={customIcon}>
             <Popup maxWidth="100%" maxHeight="auto">
-              {/* <h3>{dinosaurName}</h3> */}
-              {/* <div className="img-container">
+              <h3>{selectedDinosaur.name}</h3>
+              <div className="img-container">
                 <img
                   className="popup-img"
-                  src={dinosaurImage}
-                  alt={dinosaurName}
+                  src={selectedDinosaur.imageSrc}
+                  alt={selectedDinosaur.name}
                 />
-              </div> */}
+              </div>
             </Popup>
           </Marker>
-        )}
+        ))}
       </MapContainer>
     </div>
   );
 }
+
 export default Map;
