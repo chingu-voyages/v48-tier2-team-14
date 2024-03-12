@@ -3,13 +3,13 @@ import "./styles/Charts.css";
 import "./styles/LoadingPage.css";
 import "./styles/Map.css";
 import { data, data2 } from "./data";
-//import { useEffect } from "react";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
 import Search from "./components/Search";
 import Map from "./components/Map";
 import DinosaurDisplay from "./components/DinosaurDisplay";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -42,6 +42,7 @@ function App() {
         <DonutChart data={data2} />
       </div>
       <DinosaurDisplay />
+      <Footer />
     </AppProvider>
   );
 }
