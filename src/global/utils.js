@@ -1,3 +1,5 @@
+// import { c } from "vite/dist/node/types.d-AKzkD8vd";
+
 export const getFetchData = async (url) => {
   try {
     const response = await fetch(url);
@@ -28,3 +30,19 @@ export const getLocationCoordinates = async (locationName) => {
     return null;
   }
 };
+
+const newsApiKey = import.meta.env.VITE_NEWS_API_KEY;
+
+export const getDinoNews = async () => {
+  const url = `https://newsapi.org/v2/everything?q=("dinosaurs"+"fossils"+"dinosaur"+"discovery")&apiKey=${newsApiKey}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+getDinoNews();
