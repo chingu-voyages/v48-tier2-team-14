@@ -29,10 +29,10 @@ export const getLocationCoordinates = async (locationName) => {
   }
 };
 
-const newsApiKey = import.meta.env.VITE_NEWS_API_KEY;
+const newsApiKey = import.meta.env.VITE_G_NEWS_API_KEY;
 
 export const getDinoNews = async () => {
-  const url = `https://newsapi.org/v2/everything?q=("dinosaurs"+"fossils"+"dinosaur"+"discovery")&apiKey=${newsApiKey}`;
+  const url = `https://gnews.io/api/v4/search?q=dinosaurs&lang=en&max=3&apikey=${newsApiKey}`;
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -42,5 +42,3 @@ export const getDinoNews = async () => {
     console.error(error);
   }
 };
-
-// getDinoNews();

@@ -2,6 +2,7 @@ import "./App.css";
 import "./styles/Charts.css";
 import "./styles/LoadingPage.css";
 import "./styles/Map.css";
+import "./styles/News.css";
 import { data, data2 } from "./data";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
@@ -37,13 +38,13 @@ function App() {
           description: "N/A",
         }}
       /> */}
-      <div className="pie-chart">
+      {/* <div className="pie-chart">
         <PieChart data={data} />
       </div>
       <div className="donut-chart">
         <DonutChart data={data2} />
-      </div>
-      <DinosaurDisplay />
+      </div> */}
+      {/* <DinosaurDisplay /> */}
       <Footer />
     </AppProvider>
   );
