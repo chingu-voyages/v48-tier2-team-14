@@ -1,5 +1,3 @@
-// import { c } from "vite/dist/node/types.d-AKzkD8vd";
-
 export const getFetchData = async (url) => {
   try {
     const response = await fetch(url);
@@ -45,4 +43,4 @@ export const getDinoNews = async () => {
   }
 };
 
-getDinoNews();
+// getDinoNews();
