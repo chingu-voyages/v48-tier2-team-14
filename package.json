@@ -13,6 +13,7 @@
     "@nivo/core": "^0.85.1",
     "@nivo/pie": "^0.85.1",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "ldrs": "^1.0.1",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getDinoNews } from "../global/utils";
 
 export default function DinosaurNews() {
@@ -28,22 +28,50 @@ export default function DinosaurNews() {
       </p>
       <div className="articles">
         {dinoNews &&
-          dinoNews.map((article, index) => (
-            <div className="news-card" key={index}>
-              <img
-                className="article-img"
-                loading="lazy"
-                src={article.image}
-                alt={article.title}
-              />
-              <h3 className="article-title">{article.title}</h3>
-              <p className="article-description">{article.description}</p>
-              <a className="article-link" href={article.url}>
-                Read More
-              </a>
-            </div>
-          ))}
+          dinoNews.map((article, index) => {
+            const publishedAt = new Date(article.publishedAt);
+            const options = {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            };
+
+            const formattedDate = publishedAt.toLocaleString("en-GB", options);
+
+            return (
+              <div className="news-card" key={index}>
+                <div className="card-img-container">
+                  <img
+                    className="article-img"
+                    loading="lazy"
+                    src={article.image}
+                    alt={article.title}
+                  />
+                </div>
+                <div className="card-text-container">
+                  <div className="source-container">
+                    <p className="article-published">{formattedDate}</p>
+                    <p className="article-source">By {article.source.name}</p>
+                  </div>
+                  <h3 className="article-title">{article.title}</h3>
+                  <p className="article-description">{article.description}</p>
+                  <div className="article-link-container">
+                    <a
+                      className="article-link"
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read More
+                    </a>
+                    <i className="bi bi-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
       </div>
+      <button className="view-all">View all</button>
     </div>
   );
 }
