@@ -8,7 +8,7 @@ export const getFetchData = async (url) => {
   }
 };
 
-const geocodingApiKey = import.meta.env.VITE_GOOGLE_GEOCODING_API_KEY;
+const geocodingApiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export const getLocationCoordinates = async (locationName) => {
   try {
