@@ -80,9 +80,13 @@ export default function DinosaurNews() {
       </div>
       <button
         onClick={() => {
-          !viewAll
-            ? setViewAll(true) && setBtnText("Close")
-            : setViewAll(false) && setBtnText("View all");
+          if (!viewAll) {
+            setViewAll(true);
+            setBtnText("Close");
+          } else {
+            setViewAll(false);
+            setBtnText("View all");
+          }
         }}
         className="view-all"
       >
