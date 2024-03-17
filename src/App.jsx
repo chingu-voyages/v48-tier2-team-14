@@ -19,7 +19,7 @@ function App() {
     <AppProvider>
       <h1>Chingu Voyage 48: Tier 2 Team 14</h1>
       <DinosaurNews />
-      <Search /> 
+      <Search />
       <Map
         selectedDinosaur={{
           id: 24,
@@ -38,7 +38,6 @@ function App() {
           typeSpecies: "wichmannianus",
           description: "N/A",
         }}
-      <DinosaurDisplay />
       />
       <div className="pie-chart">
         <PieChart />
