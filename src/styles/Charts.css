@@ -2,17 +2,22 @@
   margin: 0;
   padding: 0;
 }
+
+.chart-container {
+  display: flex;
+}
+
 .pie-chart {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 2rem;
+  background-color: #f9f9f9;
 }
 
 .donut-chart {
-  width: 700px;
-  height: 700px;
   display: flex;
   flex-direction: column;
-  position: absolute;
   margin: 2rem;
 }

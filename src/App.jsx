@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import "./styles/Charts.css";
 import "./styles/LoadingPage.css";
 import "./styles/Map.css";
@@ -34,12 +34,15 @@ function App() {
           description: "N/A",
         }}
       />
-      <div className="pie-chart">
-        <PieChart />
+      <div className="chart-container">
+        <div className="pie-chart">
+          <PieChart />
+        </div>
+        <div className="donut-chart">
+          <DonutChart />
+        </div>
       </div>
-      <div className="donut-chart">
-        <DonutChart />
-      </div>
+
       <DinosaurDisplay />
       <Footer />
     </AppProvider>

@@ -28,6 +28,7 @@ const PieChart = () => {
         arcLinkLabelsColor={{ from: "color" }}
         arcLabelsSkipAngle={5}
         arcLabelsTextColor="#333333"
+        enableArcLinkLabels={false}
       />
     </>
   );
