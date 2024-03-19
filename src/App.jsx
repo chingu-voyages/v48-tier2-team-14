@@ -16,11 +16,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <AppProvider>
-      <h1>Chingu Voyage 48: Tier 2 Team 14</h1>
-      <DinosaurNews />
-      <Search />
-      <Map
+		<AppProvider>
+			<h1>Dino Studio</h1>
+			{/* <DinosaurNews /> */}
+			<Search />
+			{/* <Map
         selectedDinosaur={{
           id: 24,
           name: "Antarctosaurus",
@@ -45,10 +45,10 @@ function App() {
       <div className="donut-chart">
         <DonutChart />
       </div>
-      <DinosaurDisplay />
-      <Footer />
-    </AppProvider>
-  );
+      <DinosaurDisplay /> 
+      <Footer /> */}
+		</AppProvider>
+	);
 }
 
 export default App;
