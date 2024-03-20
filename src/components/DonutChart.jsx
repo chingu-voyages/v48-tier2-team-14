@@ -6,10 +6,12 @@ const DonutChart = () => {
   const { type } = useContext(AppContext);
   return (
     <>
-      <h1>Type of Dinasour</h1>
+      <h4 className="display-12 text-center">Type of Dinasour</h4>
       <ResponsivePieCanvas
-        data={type}
-        margin={{ top: 40, right: 200, bottom: 40, left: 80 }}
+
+        data={data}
+        margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
+
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
