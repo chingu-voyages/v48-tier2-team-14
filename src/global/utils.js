@@ -28,3 +28,17 @@ export const getLocationCoordinates = async (locationName) => {
     return null;
   }
 };
+
+const newsApiKey = import.meta.env.VITE_G_NEWS_API_KEY;
+
+export const getDinoNews = async () => {
+  const url = `https://gnews.io/api/v4/search?q=dinosaurs&lang=en&max=9&apikey=${newsApiKey}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};

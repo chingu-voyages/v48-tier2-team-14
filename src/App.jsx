@@ -2,17 +2,21 @@ import "./App.css";
 import "./styles/Charts.css";
 import "./styles/Map.css";
 import "./styles/LoadingPage.css";
+import "./styles/DinosaurNews.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { data, data2 } from "./data";
 //import { useEffect } from "react";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
+import DinosaurNews from "./components/DinosaurNews";
 import Search from "./components/Search";
 import Map from "./components/Map";
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import Footer from "./components/Footer";
 
 function App() {
+
 	return (
 		<AppProvider>
 			<div className="container-fluid">

@@ -1,13 +1,17 @@
 import { ResponsivePieCanvas } from "@nivo/pie";
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../context/Context";
 
-const DonutChart = ({ data }) => {
+const DonutChart = () => {
+  const { type } = useContext(AppContext);
   return (
     <>
       <h4 className="display-12 text-center">Type of Dinasour</h4>
       <ResponsivePieCanvas
+
         data={data}
         margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
+
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
@@ -21,7 +25,7 @@ const DonutChart = ({ data }) => {
         arcLinkLabelsTextColor="#333333"
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: "color" }}
-        arcLabelsSkipAngle={10}
+        arcLabelsSkipAngle={2}
         arcLabelsTextColor="#333333"
         defs={[
           {

@@ -1,5 +1,9 @@
 import { Pie } from "@nivo/pie";
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../context/Context";
+
+const PieChart = () => {
+  const { diet } = useContext(AppContext);
 
 const PieChart = ({ data }) => {
 	return (
@@ -28,6 +32,7 @@ const PieChart = ({ data }) => {
 			/>
 		</>
 	);
+
 };
 
 export default PieChart;
