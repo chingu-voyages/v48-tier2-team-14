@@ -3,14 +3,15 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const PieChart = () => {
-  const { diet } = useContext(AppContext);
+	const { diet } = useContext(AppContext);
 
-const PieChart = ({ data }) => {
 	return (
 		<>
-			<h4 className="display-12 text-center">Distribution of General Dinosaur Diets</h4>
+			<h4 className="display-12 text-center">
+				Distribution of General Dinosaur Diets
+			</h4>
 			<Pie
-				data={data}
+				data={diet}
 				width={500}
 				height={500}
 				margin={{ top: 0, right: 200, bottom: 200, left: 100 }}
@@ -32,7 +33,6 @@ const PieChart = ({ data }) => {
 			/>
 		</>
 	);
-
 };
 
 export default PieChart;
