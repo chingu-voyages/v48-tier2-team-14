@@ -1,8 +1,15 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  height: 200vh;
+	height: 200vh;
+}
+
+#searchBar {
+	height: 50px;
+	border: 1px solid black;
+	margin-left: 20px;
+	margin-right: 20px;
 }
