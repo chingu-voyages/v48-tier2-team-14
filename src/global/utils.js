@@ -8,7 +8,7 @@ export const getFetchData = async (url) => {
   }
 };
 
-const geocodingApiKey = import.meta.env.VITE_GOOGLE_GEOCODING_API_KEY;
+const geocodingApiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export const getLocationCoordinates = async (locationName) => {
   try {
@@ -26,5 +26,19 @@ export const getLocationCoordinates = async (locationName) => {
   } catch (error) {
     console.error("Error fetching the locations coordinates", error);
     return null;
+  }
+};
+
+const newsApiKey = import.meta.env.VITE_G_NEWS_API_KEY;
+
+export const getDinoNews = async () => {
+  const url = `https://gnews.io/api/v4/search?q=dinosaurs&lang=en&max=9&apikey=${newsApiKey}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error(error);
   }
 };
