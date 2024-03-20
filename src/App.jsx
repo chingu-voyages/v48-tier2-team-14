@@ -3,6 +3,7 @@ import "./styles/Charts.css";
 import "./styles/LoadingPage.css";
 import "./styles/Map.css";
 import "./styles/DinosaurNews.css";
+import "./styles/Search.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { data, data2 } from "./data";
 import PieChart from "./components/PieChart";
