@@ -4,7 +4,6 @@ import { AppContext } from "../context/Context";
 
 const PieChart = () => {
 	const { diet } = useContext(AppContext);
-
 	return (
 		<>
 			<h4 className="display-12 text-center">
