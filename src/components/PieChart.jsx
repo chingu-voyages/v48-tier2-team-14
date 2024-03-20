@@ -4,12 +4,12 @@ import React from "react";
 const PieChart = ({ data }) => {
 	return (
 		<>
-			<h4 className="display-6 text-center">Distribution of General Dinosaur Diets</h4>
+			<h4 className="display-12 text-center">Distribution of General Dinosaur Diets</h4>
 			<Pie
 				data={data}
 				width={500}
 				height={500}
-				margin={{ top: 0, right: 200, bottom: 40, left: 80 }}
+				margin={{ top: 0, right: 200, bottom: 200, left: 100 }}
 				valueFormat={(value) => `${value}%`}
 				padAngle={0.7}
 				cornerRadius={3}

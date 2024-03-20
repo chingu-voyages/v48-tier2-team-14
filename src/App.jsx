@@ -18,17 +18,17 @@ function App() {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col-md-8">
-						<h1 className="display-1">Dino Studio</h1>
+						<h1 className="display-6">Dino Studio</h1>
 					</div>
 					<div className="col-md-4"></div>
 				</div>
 				<div className="row">
-					<div className="col-md-12" id="searchBar">
+					<div className="col-md-6" id="searchBar">
 						<Search />
 					</div>
 				</div>
-				<div className="row">
-					<div className="col-md-10">
+				<div className="row d-flex overflow-hidden">
+					<div className="col-md-8">
 						<Map
 							selectedDinosaur={{
 								id: 24,
@@ -49,21 +49,22 @@ function App() {
 							}}
 						/>
 					</div>
-				</div>
-				<div className="row">
-					<div className="col-md-1"></div>
+
 					<div className="col-md-4">
-						<div className="pie-chart">
-							<PieChart data={data} />
+						<div className="mb-3">
+							<div className="pie-chart">
+								<PieChart data={data} />
+							</div>
 						</div>
-					</div>
-					<div className="col-md-6">
-						<div className="donut-chart">
-							<DonutChart data={data2} />
+						
+						<div>
+							<div className="donut-chart">
+								<DonutChart data={data2} />
+							</div>
 						</div>
-					</div>
-					<div className="col-md-1"></div>
+					</div>	
 				</div>
+
 				<div className="row">
 					<div className="col-md-12">
 						<DinosaurDisplay />

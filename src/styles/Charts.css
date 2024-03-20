@@ -6,12 +6,14 @@
 	display: flex;
 	flex-direction: column;
 	/* position: absolute; */
-	right: 2rem;
-	top: 10rem;
+	/* right: 2rem; */
+	/* top: 10rem; */
 
 	/* Test styling */
-	width: 50vw;
-	height: 400px;
+	width: 100%;
+	height: 330px;
+	background-color: lightgray;
+	/* outline: 1px solid red; */
 }
 
 .donut-chart {
@@ -20,10 +22,12 @@
 	display: flex;
 	flex-direction: column;
 	/* position: absolute; */
-	left: 2rem;
-	top: 10rem;
+	/* left: 2rem; */
+	/* top: 10rem; */
 
 	/* Test styling */
-	width: 50vw;
-	height: 400px;
+	width: 100%;
+	height: 335px;
+	/* outline: 1px solid green; */
+	background-color: lightgray;
 }

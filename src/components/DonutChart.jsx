@@ -4,10 +4,10 @@ import React from "react";
 const DonutChart = ({ data }) => {
   return (
     <>
-      <h4 className="display-6 text-center">Type of Dinasour</h4>
+      <h4 className="display-12 text-center">Type of Dinasour</h4>
       <ResponsivePieCanvas
         data={data}
-        margin={{ top: 40, right: 200, bottom: 40, left: 80 }}
+        margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
