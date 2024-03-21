@@ -2,22 +2,22 @@ import React, { useEffect, useState } from "react";
 import { getDinoNews } from "../global/utils";
 
 export default function DinosaurNews() {
-  const [dinoNews, setDinoNews] = useState(null);
+  // const [dinoNews, setDinoNews] = useState(null);
   const [viewAll, setViewAll] = useState(false);
   const [btnText, setBtnText] = useState("View all");
 
-  useEffect(() => {
-    const fetchDinoNews = async () => {
-      try {
-        const data = await getDinoNews();
-        console.log(data);
-        setDinoNews(data.articles);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchDinoNews();
-  }, []);
+  // useEffect(() => {
+  //   const fetchDinoNews = async () => {
+  //     try {
+  //       const data = await getDinoNews();
+  //       console.log(data);
+  //       setDinoNews(data.articles);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   fetchDinoNews();
+  // }, []);
 
   return (
     <div className="news-container">

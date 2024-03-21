@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { getFetchData } from "../global/utils.js";
+import { getFetchData, getDinoNews } from "../global/utils.js";
 import LoadingPage from "../components/LoadingPage";
 import randomColor from "randomcolor";
 
@@ -7,27 +7,34 @@ const AppContext = createContext();
 const DINO_API_URL = "https://chinguapi.onrender.com/dinosaurs";
 
 const AppProvider = ({ children }) => {
-  // State Properties, add or modify as needed
-  const [responseData, setResponseData] = useState([]);
+	// State Properties, add or modify as needed
+	const [responseData, setResponseData] = useState([]);
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [diet, setDiet] = useState([]);
 	const [type, setType] = useState([]);
+	const [dinoNews, setDinoNews] = useState();
+
+	//------------------------------------- API CALLS --------------------------------------
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const storedDinoData = localStorage.getItem("dinoData");
-        if (storedDinoData) {
-          console.log("No API call made, data in local storage: (dinoData)") // check to see whether unnecessary calls are made
+				if (storedDinoData) {
+					console.log("No API call made, data in local storage: (dinoData)"); // check to see whether unnecessary calls are made
 					setResponseData(JSON.parse(storedDinoData));
-          setData(JSON.parse(storedDinoData));
-          setLoading(false);
+					setData(JSON.parse(storedDinoData));
+					// console.log("data", data);
+					// console.log("response", responseData);
+					setLoading(false);
 				} else {
 					const responseData = await getFetchData(DINO_API_URL);
 					console.log("API call made"); // check to see whether unnecessary calls are made
 					setResponseData(responseData);
-          setData(responseData);
+					// console.log("data", data);
+					// console.log("response", responseData);
+					setData(responseData);
 					setTimeout(() => {
 						setLoading(false);
 						localStorage.setItem("dinoData", JSON.stringify(responseData));
@@ -41,6 +48,31 @@ const AppProvider = ({ children }) => {
 
 		fetchData();
 	}, []);
+
+	useEffect(() => {
+		const fetchDinoNewsData = async () => {
+			try {
+				const storedDinoNews = localStorage.getItem("dinoNews");
+				if (storedDinoNews) {
+					console.log(
+						"No NewsAPI call made, data in local storage: (dinoNews)"
+					);
+					setDinoNews(JSON.parse(storedDinoNews));
+				} else {
+					const newsData = await getDinoNews(); 
+					console.log("NewsAPI call made", newsData);
+					setDinoNews(newsData.articles);
+					localStorage.setItem("dinoNews", JSON.stringify(newsData.articles));
+				}
+			} catch (error) {
+				console.error("Error fetching news data:", error);
+			}
+		};
+
+		fetchDinoNewsData();
+	}, []);
+
+	//------------------------------------- DINO CHARTS --------------------------------------
 
 	useEffect(() => {
 		const dinasourDiet = {};
@@ -110,6 +142,26 @@ const AppProvider = ({ children }) => {
 		setDiet(dinasourDietData);
 		setType(dinasourTypeData);
 	}, [data]);
+
+	//------------------------------------- SEARCH --------------------------------------
+
+	const defaultSearch = {
+		name: "",
+		minWeight: 0,
+		maxWeight: 70000,
+		minLength: 0,
+		maxLength: 37.5,
+		country: "",
+		diet: "",
+	};
+
+	const searchDinosaurs = (searchQuery) => {
+		const searchResult = "";
+
+		setData(searchResult);
+	};
+
+	//------------------------------------- LDRS --------------------------------------
 
 	if (loading) {
 		return (
