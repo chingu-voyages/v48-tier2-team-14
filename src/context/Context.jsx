@@ -172,7 +172,7 @@ const AppProvider = ({ children }) => {
 	}
 
 	return (
-		<AppContext.Provider value={{ responseData, data, diet, type }}>
+		<AppContext.Provider value={{ responseData, data, diet, type, dinoNews }}>
 			{children}
 		</AppContext.Provider>
 	);

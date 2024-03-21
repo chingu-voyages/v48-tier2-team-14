@@ -72,7 +72,7 @@ function App() {
 				<div className="row">
 					<div className="col-md-12">
 						{/* <DinosaurDisplay /> */}
-						{/* <DinosaurNews /> */}
+						<DinosaurNews />
 					</div>
 				</div>
 			</div>
