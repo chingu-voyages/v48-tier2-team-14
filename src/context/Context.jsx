@@ -8,7 +8,7 @@ const DINO_API_URL = "https://chinguapi.onrender.com/dinosaurs";
 
 const AppProvider = ({ children }) => {
 	// State Properties, add or modify as needed
-	const [responseData, setResponseData] = useState([]);
+	const [responseData, setResponseData] = useState([]); //NEVER USE 'setResponseData'
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [diet, setDiet] = useState([]);
@@ -145,20 +145,23 @@ const AppProvider = ({ children }) => {
 
 	//------------------------------------- SEARCH --------------------------------------
 
-	const defaultSearch = {
+	const searchObj = {
 		name: "",
 		minWeight: 0,
 		maxWeight: 70000,
 		minLength: 0,
 		maxLength: 37.5,
-		country: "",
-		diet: "",
+		// country: "",
+		// diet: "",
 	};
 
 	const searchDinosaurs = (searchQuery) => {
-		const searchResult = "";
-
-		setData(searchResult);
+		const matchedItems = responseData.filter((dinosaur) =>
+			dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase())
+		);
+		
+		console.log("MATCH:", matchedItems);
+		setData(matchedItems);
 	};
 
 	//------------------------------------- LDRS --------------------------------------
@@ -172,7 +175,7 @@ const AppProvider = ({ children }) => {
 	}
 
 	return (
-		<AppContext.Provider value={{ responseData, data, diet, type, dinoNews }}>
+		<AppContext.Provider value={{ responseData, data, diet, type, dinoNews, searchObj, searchDinosaurs }}>
 			{children}
 		</AppContext.Provider>
 	);

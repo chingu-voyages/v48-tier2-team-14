@@ -42,7 +42,7 @@ function Map({ selectedDinosaur }) {
     }
   }, [selectedDinosaur]);
 
-  console.log("Location coordinates:", locationCoordinates);
+  // console.log("Location coordinates:", locationCoordinates);
 
   return (
     <div className="map-container">

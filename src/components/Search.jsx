@@ -1,21 +1,25 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../context/Context";
 
 function Search() {
-	const { data } = useContext(AppContext);
-
-	const onChange = (value) => {
-		console.log("onChange: ", value);
+	const { data, searchDinosaurs, searchObj } = useContext(AppContext);
+	const [name, setName] = useState();
+	
+	const handleChange = (event) => {
+		setName(event.target.value);
+		searchObj.name = name;
 	};
-	const onChangeComplete = (value) => {
-		console.log("onChangeComplete: ", value);
-	};
 
-	console.log(data);
+	const handleSubmit = () => {
+		console.log(name);
+		searchDinosaurs(searchObj);
+	}
+
+	// console.log(data);
 	return (
 		<div className="row">
-			<input placeholder="Search for a dinosuar..." type="text" className='col-md-2'></input>
-			<button className='col-md-1'>Search</button>
+			<input placeholder="Search for a dinosuar..." type="text" className='col-md-2' onChange={handleChange}></input>
+			<button className='col-md-1' onClick={handleSubmit}>Search</button>
 		</div>
 	);
 }
