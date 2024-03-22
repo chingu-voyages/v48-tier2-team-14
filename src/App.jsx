@@ -14,6 +14,7 @@ import Search from "./components/Search";
 import Map from "./components/Map";
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import Footer from "./components/Footer";
+import SearchInfo from "./components/SearchInfo";
 
 function App() {
 	return (
@@ -28,6 +29,11 @@ function App() {
 				<div className="row">
 					<div className="col-md-11" id="searchBar">
 						<Search />
+					</div>
+				</div>
+				<div className="row">
+					<div className="mb-3 mt-3 col-md-12">
+						<SearchInfo />
 					</div>
 				</div>
 				<div className="row d-flex overflow-hidden">
