@@ -49,6 +49,8 @@ function Map({ selectedDinosaur }) {
       <MapContainer
         center={[0, 0]}
         zoom={2}
+        minZoom={2}
+        maxZoom={19}
         style={{ height: "700px", width: "full" }}
       >
         <TileLayer
