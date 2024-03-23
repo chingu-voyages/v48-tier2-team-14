@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [diet, setDiet] = useState([]);
+	const [country, setCountry] = useState()
 	const [type, setType] = useState([]);
 	const [dinoNews, setDinoNews] = useState();
 
@@ -22,7 +23,7 @@ const AppProvider = ({ children }) => {
 			try {
 				const storedDinoData = localStorage.getItem("dinoData");
 				if (storedDinoData) {
-					console.log("No API call made, data in local storage: (dinoData)"); // check to see whether unnecessary calls are made
+					//console.log("No API call made, data in local storage: (dinoData)"); // check to see whether unnecessary calls are made
 					setResponseData(JSON.parse(storedDinoData));
 					setData(JSON.parse(storedDinoData));
 					// console.log("data", data);
@@ -30,7 +31,7 @@ const AppProvider = ({ children }) => {
 					setLoading(false);
 				} else {
 					const responseData = await getFetchData(DINO_API_URL);
-					console.log("API call made"); // check to see whether unnecessary calls are made
+					//console.log("API call made"); // check to see whether unnecessary calls are made
 					setResponseData(responseData);
 					// console.log("data", data);
 					// console.log("response", responseData);
@@ -54,13 +55,11 @@ const AppProvider = ({ children }) => {
 			try {
 				const storedDinoNews = localStorage.getItem("dinoNews");
 				if (storedDinoNews) {
-					console.log(
-						"No NewsAPI call made, data in local storage: (dinoNews)"
-					);
+					//console.log("No NewsAPI call made, data in local storage: (dinoNews)");
 					setDinoNews(JSON.parse(storedDinoNews));
 				} else {
 					const newsData = await getDinoNews(); 
-					console.log("NewsAPI call made", newsData);
+					//console.log("NewsAPI call made", newsData);
 					setDinoNews(newsData.articles);
 					localStorage.setItem("dinoNews", JSON.stringify(newsData.articles));
 				}
@@ -158,23 +157,47 @@ const AppProvider = ({ children }) => {
 	const [searchObj, setSearchObj] = useState(defaultSearchObj)
 
 	const searchDinosaurs = (searchQuery) => {
-		const matchedItems = responseData.filter((dinosaur) => {
-			const nameMatch = searchQuery.name.trim() === "" || dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase());
-			const countryMatch = searchQuery.country.trim() === "" || dinosaur.country.toLowerCase() === searchQuery.country.toLowerCase();
-			const dietMatch = searchQuery.diet.trim() === "" || dinosaur.diet.toLowerCase() === searchQuery.diet.toLowerCase();
-			const weightMatch = dinosaur.weight === "N/A" || (dinosaur.weight >= searchQuery.minWeight && dinosaur.weight <= searchQuery.maxWeight);
-			const lengthMatch = dinosaur.length >= searchQuery.minLength && dinosaur.length <= searchQuery.maxLength;
-
-			console.log(nameMatch, countryMatch, dietMatch, weightMatch, lengthMatch )
-			return (
-				nameMatch && countryMatch && dietMatch && weightMatch && lengthMatch
+		let matchedItems = responseData;
+		console.log("Name", name)
+		console.log("Country", country)
+		if (searchQuery.name.trim() !== "") {
+			matchedItems = matchedItems.filter(
+				(dinosaur) =>
+				dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase())
 			);
-		});
+		}
+
+		if (searchQuery.country.trim() !== "") {
+			matchedItems = matchedItems.filter(
+				(dinosaur) =>
+					dinosaur.foundIn.toLowerCase().includes(searchQuery.country.toLowerCase())
+			);
+		}
+
+		if (searchQuery.diet.trim() !== "") {
+			matchedItems = matchedItems.filter(
+				(dinosaur) =>
+				dinosaur.diet.toLowerCase().includes(searchQuery.diet.toLowerCase())
+			);
+		}
+
+		matchedItems = matchedItems.filter(
+			(dinosaur) =>
+				dinosaur.weight >= searchQuery.minWeight &&
+				dinosaur.weight <= searchQuery.maxWeight
+		);
+
+		matchedItems = matchedItems.filter(
+			(dinosaur) =>
+				dinosaur.length >= searchQuery.minLength &&
+				dinosaur.length <= searchQuery.maxLength
+		);
 
 		console.log("MATCH:", matchedItems);
 		setData(matchedItems);
 	};
 
+	
 	//------------------------------------- LDRS --------------------------------------
 
 	if (loading) {
@@ -186,7 +209,7 @@ const AppProvider = ({ children }) => {
 	}
 
 	return (
-		<AppContext.Provider value={{ responseData, data, diet, type, dinoNews, searchObj, setSearchObj, searchDinosaurs }}>
+		<AppContext.Provider value={{ responseData, data, setData, diet, type, dinoNews, searchObj, setSearchObj, searchDinosaurs }}>
 			{children}
 		</AppContext.Provider>
 	);
