@@ -158,10 +158,19 @@ const AppProvider = ({ children }) => {
 	const [searchObj, setSearchObj] = useState(defaultSearchObj)
 
 	const searchDinosaurs = (searchQuery) => {
-		const matchedItems = responseData.filter((dinosaur) =>
-			dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase())
-		);
-		
+		const matchedItems = responseData.filter((dinosaur) => {
+			const nameMatch = searchQuery.name.trim() === "" || dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase());
+			const countryMatch = searchQuery.country.trim() === "" || dinosaur.country.toLowerCase() === searchQuery.country.toLowerCase();
+			const dietMatch = searchQuery.diet.trim() === "" || dinosaur.diet.toLowerCase() === searchQuery.diet.toLowerCase();
+			const weightMatch = dinosaur.weight === "N/A" || (dinosaur.weight >= searchQuery.minWeight && dinosaur.weight <= searchQuery.maxWeight);
+			const lengthMatch = dinosaur.length >= searchQuery.minLength && dinosaur.length <= searchQuery.maxLength;
+
+			console.log(nameMatch, countryMatch, dietMatch, weightMatch, lengthMatch )
+			return (
+				nameMatch && countryMatch && dietMatch && weightMatch && lengthMatch
+			);
+		});
+
 		console.log("MATCH:", matchedItems);
 		setData(matchedItems);
 	};

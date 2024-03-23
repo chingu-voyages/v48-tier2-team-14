@@ -11,16 +11,6 @@ function Search() {
 	const [diet, setDiet] = useState();
 	const [country, setCountry] = useState();
 
-	// const searchObj = {
-	// 	name: "",
-	// 	minWeight: 0,
-	// 	maxWeight: 70000,
-	// 	minLength: 0,
-	// 	maxLength: 37.5,
-	// 	country: "",
-	// 	diet: "",
-	// };
-
 	const handleNameChange = (event) => {
 		const newName = event.target.value;
 		setName(newName);
@@ -88,8 +78,7 @@ function Search() {
 		console.log(searchObj);
 		searchDinosaurs(searchObj);
 	};
-
-	// console.log(data);
+	
 	return (
 		<div className="row">
 			<input
