@@ -145,15 +145,17 @@ const AppProvider = ({ children }) => {
 
 	//------------------------------------- SEARCH --------------------------------------
 
-	const searchObj = {
+	const defaultSearchObj = {
 		name: "",
 		minWeight: 0,
 		maxWeight: 70000,
 		minLength: 0,
 		maxLength: 37.5,
-		// country: "",
-		// diet: "",
+		country: "",
+		diet: "",
 	};
+
+	const [searchObj, setSearchObj] = useState(defaultSearchObj)
 
 	const searchDinosaurs = (searchQuery) => {
 		const matchedItems = responseData.filter((dinosaur) =>
@@ -175,7 +177,7 @@ const AppProvider = ({ children }) => {
 	}
 
 	return (
-		<AppContext.Provider value={{ responseData, data, diet, type, dinoNews, searchObj, searchDinosaurs }}>
+		<AppContext.Provider value={{ responseData, data, diet, type, dinoNews, searchObj, setSearchObj, searchDinosaurs }}>
 			{children}
 		</AppContext.Provider>
 	);
