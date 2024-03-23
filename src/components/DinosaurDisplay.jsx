@@ -1,6 +1,12 @@
 function DinosaurDisplay() {
-  return (
-    <div>DinosaurDisplay</div>
-  )
+	return (
+		<div>
+			<input
+				type="text"
+				placeholder="Dinosaur display"
+				name="dinosaur-display"
+			/>
+		</div>
+	);
 }
-export default DinosaurDisplay
+export default DinosaurDisplay;
