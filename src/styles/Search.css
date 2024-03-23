@@ -1,0 +1,14 @@
+.lengthSlider {
+	width: 100px;
+}
+
+.weightSlider {
+	width: 100px;
+}
+
+.sliderBox {
+	display: inline-flex;
+	text-align: center;
+	justify-content: center;
+	margin: 0 5px;
+}
