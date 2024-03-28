@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../context/Context";
 
 function Search() {
@@ -122,6 +122,17 @@ function Search() {
 			country: "",
 		});
 	};
+	useEffect(() => {
+	const handleKeyDown = (event) => {
+		if (event.key === "Escape") {
+			clearSearch();
+		}
+	};
+	document.addEventListener("keydown", handleKeyDown);
+	return () => {
+		document.removeEventListener("keydown", handleKeyDown);
+	};
+}, []);
 
 	return (
 		<div className="row">
