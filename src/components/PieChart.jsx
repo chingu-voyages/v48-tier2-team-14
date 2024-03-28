@@ -3,7 +3,18 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const PieChart = () => {
-	const { diet } = useContext(AppContext);
+	const { diet, data, setData } = useContext(AppContext);
+
+	const handleClick = (slice) => {
+		console.log('Slice clicked', slice)
+		const clickedId = slice.id;
+		const filteredChart = data.filter(
+			(dinosaur) => dinosaur.diet === clickedId
+		);
+		console.log(filteredChart)
+		setData(filteredChart);
+	}
+
 	return (
 		<>
 			<h4 className="display-12 text-center">
@@ -16,6 +27,7 @@ const PieChart = () => {
 				margin={{ top: 0, right: 200, bottom: 200, left: 100 }}
 				valueFormat={(value) => `${value}%`}
 				padAngle={0.7}
+				onClick={handleClick}
 				cornerRadius={3}
 				activeOuterRadiusOffset={8}
 				colors={{ scheme: "paired" }}
