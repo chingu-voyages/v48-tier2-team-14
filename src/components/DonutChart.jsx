@@ -3,7 +3,18 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const DonutChart = () => {
-  const { type } = useContext(AppContext);
+  const { type, data, setData } = useContext(AppContext);
+
+	const handleClick = (slice) => {
+		console.log("Slice clicked", slice);
+		const clickedId = slice.id;
+		const filteredChart = data.filter(
+			(dinosaur) => dinosaur.typeOfDinosaur === clickedId
+		);
+		console.log(filteredChart);
+		setData(filteredChart);
+	};
+	
 	return (
 		<>
 			<h4 className="display-12 text-center">Type of Dinasour</h4>
@@ -13,6 +24,7 @@ const DonutChart = () => {
 				innerRadius={0.5}
 				padAngle={0.7}
 				cornerRadius={3}
+				onClick={handleClick}
 				activeOuterRadiusOffset={8}
 				colors={{ scheme: "paired" }}
 				borderColor={{
