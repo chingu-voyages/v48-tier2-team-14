@@ -31,7 +31,7 @@ function App() {
 						<Search />
 					</div>
 				</div>
-				<div className="row d-flex overflow-hidden">
+				<div className="row d-flex overflow-hidden mt-3 py-4">
 					<div className="col-md-8">
 						<Map
 							selectedDinosaur={{
@@ -57,12 +57,14 @@ function App() {
 					<div className="col-md-4">
 						<div className="mb-3">
 							<div className="pie-chart">
+								<div className="borderTop"></div>
 								<PieChart data={data} />
 							</div>
 						</div>
 
 						<div>
 							<div className="donut-chart">
+								<div className="borderTop"></div>
 								<DonutChart data={data2} />
 							</div>
 						</div>

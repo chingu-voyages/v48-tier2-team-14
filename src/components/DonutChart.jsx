@@ -6,10 +6,14 @@ const DonutChart = () => {
   const { type } = useContext(AppContext);
 	return (
 		<>
-			<h4 className="display-12 text-center">Type of Dinasour</h4>
+			<div className="headerText">
+				<h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
+					dinosaur types
+				</h6>
+			</div>
 			<ResponsivePieCanvas
 				data={type}
-				margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
+				margin={{ top: 40, right: 200, bottom: 50, left: 80 }}
 				innerRadius={0.5}
 				padAngle={0.7}
 				cornerRadius={3}
