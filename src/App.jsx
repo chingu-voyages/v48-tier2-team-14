@@ -6,15 +6,14 @@ import "./styles/DinosaurNews.css";
 import "./styles/Search.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { data, data2 } from "./data";
-//import { useEffect } from "react";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
-import DinosaurNews from "./components/DinosaurNews";
 import Search from "./components/Search";
+import Map from "./components/Map";
 import DinosaurDisplay from "./components/DinosaurDisplay";
+import DinosaurNews from "./components/DinosaurNews";
 import Footer from "./components/Footer";
-import GoogleMap from "./components/GoogleMap";
 
 function App() {
   return (
@@ -33,7 +32,7 @@ function App() {
         </div>
         <div className="row d-flex overflow-hidden">
           <div className="col-md-8">
-            <GoogleMap />
+            <Map />
           </div>
 
           <div className="col-md-4">
