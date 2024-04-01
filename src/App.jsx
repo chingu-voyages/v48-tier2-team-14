@@ -27,7 +27,7 @@ function App() {
 					<div className="col-md-4"></div>
 				</div>
 				<div className="row">
-					<div className="col-md-11" id="searchBar">
+					<div className="col-md-11">
 						<Search />
 					</div>
 				</div>

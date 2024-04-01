@@ -6,11 +6,3 @@
 body {
 	height: 200vh;
 }
-
-#searchBar {
-	height: 50px;
-	padding: 10px 25px;
-	border: 1px solid black;
-	margin-left: 20px;
-	margin-right: 20px;
-}
