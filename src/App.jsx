@@ -12,9 +12,9 @@ import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
 import DinosaurNews from "./components/DinosaurNews";
 import Search from "./components/Search";
-import Map from "./components/Map";
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import Footer from "./components/Footer";
+import GoogleMap from "./components/GoogleMap";
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
         </div>
         <div className="row d-flex overflow-hidden">
           <div className="col-md-8">
-            <Map />
+            <GoogleMap />
           </div>
 
           <div className="col-md-4">
