@@ -258,6 +258,7 @@ const AppProvider = ({ children }) => {
         setSearchObj,
         searchDinosaurs,
         locationCoordinates,
+        setMatchedItems,
       }}
     >
       {children}
