@@ -7,11 +7,14 @@
   background-color:  #DFF5FF;
 }
 
-.news-heading,
+.news-heading {
+  text-align: center;
+  padding-top: 1rem;
+}
+
 .news-intro {
   text-align: center;
   padding-bottom: 2rem;
-  padding-top: 2rem;
 }
 
 .news-heading {
