@@ -5,6 +5,7 @@ import "./styles/LoadingPage.css";
 import "./styles/DinosaurNews.css";
 import "./styles/Search.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Navbar from "./components/Navbar";
 import { data, data2 } from "./data";
 //import { useEffect } from "react";
 import PieChart from "./components/PieChart";
@@ -20,11 +21,12 @@ function App() {
 	return (
 		<AppProvider>
 			<div className="container-fluid">
+				<Navbar />
 				<div className="row">
-					<div className="col-md-8">
-						<h1 className="display-6">Dino Studio</h1>
+					<div className="col-md-12">
+						{/* <DinosaurDisplay /> */}
+						<DinosaurNews />
 					</div>
-					<div className="col-md-4"></div>
 				</div>
 				<div className="row">
 					<div className="col-md-11">
@@ -68,13 +70,6 @@ function App() {
 								<DonutChart data={data2} />
 							</div>
 						</div>
-					</div>
-				</div>
-
-				<div className="row">
-					<div className="col-md-12">
-						{/* <DinosaurDisplay /> */}
-						<DinosaurNews />
 					</div>
 				</div>
 			</div>
