@@ -45,7 +45,7 @@ function Map() {
   return (
     <APIProvider apiKey={apiKey}>
       <div style={{ height: "700px" }}>
-        <DinoMap zoom={zoom} center={mapCenter} mapId={mapId}>
+        <DinoMap defaultZoom={zoom} defaultCenter={mapCenter} mapId={mapId}>
           {locationCoordinates.flatMap(({ dinosaur, coordinates }, idx) =>
             coordinates.map((coordinate, index) => {
               const popupIndex = idx * coordinates.length + index;
