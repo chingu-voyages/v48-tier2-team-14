@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../context/Context";
 
 function Search() {
@@ -122,13 +122,24 @@ function Search() {
 			country: "",
 		});
 	};
+	useEffect(() => {
+	const handleKeyDown = (event) => {
+		if (event.key === "Escape") {
+			clearSearch();
+		}
+	};
+	document.addEventListener("keydown", handleKeyDown);
+	return () => {
+		document.removeEventListener("keydown", handleKeyDown);
+	};
+}, []);
 
 	return (
-		<div className="row">
+		<div className="row d-inline-flex justify-content-between" id="searchBar">
 			<input
 				placeholder="Search for a dinosuar..."
 				type="text"
-				className="col-md-2"
+				className="col-md-2 rounded-1 border-0 py-2"
 				value={name}
 				onChange={handleNameChange}
 				onFocus={handleNameFocus}
@@ -136,14 +147,14 @@ function Search() {
 			<input
 				placeholder="Country"
 				type="text"
-				className="col-md-1"
+				className="col-md-1 rounded-1 border-0 py-2"
 				value={country}
 				onFocus={handleCountryFocus}
 				onChange={handleCountryChange}
 			></input>
 			<input
 				placeholder="0"
-				className="col-md-1"
+				className="col-md-1 rounded-1 border-0 py-2"
 				type="number"
 				min="0"
 				max="70000"
@@ -152,7 +163,7 @@ function Search() {
 			></input>
 			<input
 				//placeholder="70000"
-				className="col-md-1"
+				className="col-md-1 rounded-1 border-0 py-2"
 				type="number"
 				min="0"
 				max="70000"
@@ -162,14 +173,14 @@ function Search() {
 			<input
 				placeholder="Diet"
 				type="text"
-				className="col-md-1"
+				className="col-md-1 rounded-1 border-0 py-2"
 				value={diet}
 				onFocus={handleDietFocus}
 				onChange={handleDietChange}
 			></input>
 			<input
 				placeholder="0"
-				className="col-md-1"
+				className="col-md-1 rounded-1 border-0 py-2"
 				type="number"
 				min="0"
 				max="37.5"
@@ -178,17 +189,17 @@ function Search() {
 			></input>
 			<input
 				placeholder="37.5"
-				className="col-md-1"
+				className="col-md-1 rounded-1 border-0 py-2"
 				type="number"
 				min="0"
 				max="37.5"
 				value={maxLength}
 				onChange={handleMaxLengthChange}
 			></input>
-			<button className="col-md-1" onClick={handleSubmit}>
+			<button className="col-md-1 rounded-1 border-0 py-2" id="searchBtn" onClick={handleSubmit}>
 				Search
 			</button>
-			<button className="col-md-1" onClick={clearSearch}>
+			<button className="col-md-1 rounded-1 border-0 bg-white py-2" onClick={clearSearch}>
 				Clear
 			</button>
 		</div>

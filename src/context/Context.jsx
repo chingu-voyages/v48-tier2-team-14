@@ -158,11 +158,9 @@ const AppProvider = ({ children }) => {
 
 	const searchDinosaurs = (searchQuery) => {
 		let matchedItems = responseData;
-		console.log("Name", name)
-		console.log("Country", country)
+		
 		if (searchQuery.name.trim() !== "") {
-			matchedItems = matchedItems.filter(
-				(dinosaur) =>
+			matchedItems = matchedItems.filter((dinosaur) =>
 				dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase())
 			);
 		}
@@ -177,20 +175,23 @@ const AppProvider = ({ children }) => {
 		if (searchQuery.diet.trim() !== "") {
 			matchedItems = matchedItems.filter(
 				(dinosaur) =>
-				dinosaur.diet.toLowerCase().includes(searchQuery.diet.toLowerCase())
+					dinosaur.weight === "unknown" ||
+					dinosaur.diet.toLowerCase().includes(searchQuery.diet.toLowerCase())
 			);
 		}
 
 		matchedItems = matchedItems.filter(
 			(dinosaur) =>
-				dinosaur.weight >= searchQuery.minWeight &&
-				dinosaur.weight <= searchQuery.maxWeight
+				dinosaur.weight === "N/A" ||
+				(parseFloat(dinosaur.weight) >= searchQuery.minWeight &&
+					parseFloat(dinosaur.weight) <= searchQuery.maxWeight)
 		);
 
 		matchedItems = matchedItems.filter(
 			(dinosaur) =>
-				dinosaur.length >= searchQuery.minLength &&
-				dinosaur.length <= searchQuery.maxLength
+				dinosaur.length === "N/A" ||
+				(dinosaur.length >= searchQuery.minLength &&
+					dinosaur.length <= searchQuery.maxLength)
 		);
 
 		console.log("MATCH:", matchedItems);
