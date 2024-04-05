@@ -78,7 +78,7 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="container-fluid">
+			<div>
 				<Footer />
 			</div>
 		</AppProvider>

@@ -5,7 +5,17 @@
     height: 200px;
 }
 
-/* #footer a {
+#footerContainer {
+    width: 90%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+#githubIcon {
+    font-size: 1.2rem;
+}
+
+#testing a {
     text-decoration: none;
     color: white;
-} */
+}
