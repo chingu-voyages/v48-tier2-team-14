@@ -48,7 +48,7 @@ function Map() {
         <DinoMap defaultZoom={zoom} defaultCenter={mapCenter} mapId={mapId}>
           {locationCoordinates.flatMap(({ dinosaur, coordinates }, idx) =>
             coordinates.map((coordinate, index) => {
-              const popupIndex = idx * coordinates.length + index;
+              const popupIndex = `${dinosaur.name}-${idx}-${index}`;
               return (
                 <div key={popupIndex}>
                   <AdvancedMarker
