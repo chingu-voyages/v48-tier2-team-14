@@ -1,4 +1,12 @@
 .popup-img {
-  height: 100px;
+  height: 150px;
   width: auto;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }

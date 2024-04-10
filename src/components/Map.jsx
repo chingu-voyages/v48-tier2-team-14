@@ -3,6 +3,7 @@ import {
   Map as DinoMap,
   AdvancedMarker,
   InfoWindow,
+  Pin,
 } from "@vis.gl/react-google-maps";
 import { useContext, useState, useMemo, useRef } from "react";
 import { AppContext } from "../context/Context";
@@ -52,6 +53,8 @@ function Map() {
           defaultZoom={zoom}
           defaultCenter={mapCenter}
           mapId={mapId}
+          streetViewControl={false}
+          mapTypeControl={false}
         >
           {locationCoordinates.flatMap(({ dinosaur, coordinates }, idx) =>
             coordinates.map((coordinate, index) => {
@@ -62,7 +65,13 @@ function Map() {
                     ref={(ref) => (markerRefs.current[popupIndex] = ref)}
                     position={coordinate}
                     onClick={() => handleMarkerClick(popupIndex)}
-                  />
+                  >
+                    <Pin
+                      background={"#008080"}
+                      glyphColor={"#ffd60a"}
+                      borderColor={"#000"}
+                    />
+                  </AdvancedMarker>
                   {openPopups[popupIndex] && (
                     <InfoWindow
                       anchor={markerRefs.current[popupIndex]}
