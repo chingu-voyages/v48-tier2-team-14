@@ -1,6 +1,6 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .pie-chart, .donut-chart {
@@ -12,6 +12,15 @@
 	position: relative;
 	width: 100%;
 	height: 330px;
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid lightgray;
+  border-right: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  position: relative;
+  width: 100%;
+  height: 330px;
 }
 
 .borderTop:before {
@@ -31,3 +40,4 @@
 	color: #008080;
 	background-color: #edfafa;
 }
+
