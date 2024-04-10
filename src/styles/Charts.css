@@ -38,9 +38,10 @@
 .headerText > h6 {
 	position: absolute;
 	width: 50%;
-	top: -0.5rem;
+	top: -0.6rem;
 	color: #2D9596;
 	background: #DFF5FF;
+	/* margin-top: 2rem; */
 }
 
 .dinasourList {

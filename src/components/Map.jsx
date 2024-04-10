@@ -46,10 +46,15 @@ function Map({ selectedDinosaur }) {
 
   return (
     <div className="map-container">
+      <div className="headerText">
+				<h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
+					dinosaur locations
+				</h6>
+			</div>
       <MapContainer
         center={[0, 0]}
         zoom={2}
-        style={{ height: "700px", width: "full" }}
+        style={{ height: "700px", width: "full", marginTop: "1.5rem" }}
       >
         <TileLayer
           attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
@@ -70,6 +75,7 @@ function Map({ selectedDinosaur }) {
           </Marker>
         ))}
       </MapContainer>
+      <div id="mapBorderTop"></div>
     </div>
   );
 }

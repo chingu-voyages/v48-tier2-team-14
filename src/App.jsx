@@ -34,7 +34,7 @@ function App() {
 						<Search />
 					</div>
 				</div>
-				<div className="row d-flex overflow-hidden">
+				<div className="row d-flex mt-4">
 					<div className="col-md-8">
 						<Map
 							selectedDinosaur={{
