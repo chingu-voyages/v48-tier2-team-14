@@ -58,7 +58,10 @@ function App() {
 					</div>
 
 					<div className="col-md-4">
-						<List />
+						<div className="dinasourList">
+							<List />
+							<div id="dinasourListBorderTop"></div>
+						</div>
 					</div>
 				</div>
 
