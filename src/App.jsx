@@ -17,14 +17,15 @@ import List from './components/List'
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import Footer from "./components/Footer";
 import DinasourDetails from "./components/DinasourDetails";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<AppProvider>
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-8">
-						<h1 className="display-6">Dino Studio</h1>
+					<div className="col-md-12">
+						<Navbar />
 					</div>
 					<div className="col-md-4"></div>
 				</div>
