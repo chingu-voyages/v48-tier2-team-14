@@ -20,3 +20,27 @@
     text-decoration: none;
     color: white;
 }
+
+.dinasourList {
+	display: flex;
+	flex-direction: column;
+	border-left: 2px solid lightgray;
+	border-right: 2px solid lightgray;
+	border-bottom: 2px solid lightgray;
+	position: absolute;
+    top: -46.85rem;
+    right: 0;
+    width: 32.3%;
+	/* height: 168.3vh; */
+    height: 1079px;
+}
+
+#dinasourListBorderTop {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45%;
+	height: 50px;
+	border-top: 2px solid #008080;
+}

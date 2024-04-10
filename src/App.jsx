@@ -56,27 +56,27 @@ function App() {
 							}}
 						/>
 					</div>
-
-					<div className="col-md-4">
-						<div className="dinasourList">
-							<List />
-							<div id="dinasourListBorderTop"></div>
-						</div>
-					</div>
 				</div>
 
-				<div className="row">
-					<div className="col-md-6">
+				<div className="row mt-4 position-relative">
+					<div className="col-md-4">
 						<div className="pie-chart">
 							<PieChart data={data} />
 							<div className="borderTop"></div>
 						</div>
 					</div>
 
-					<div className="col-md-6">
+					<div className="col-md-4 mt-md-0 mt-4">
 						<div className="donut-chart">
 							<DonutChart data={data2} />
 							<div className="borderTop"></div>
+						</div>
+					</div>
+
+					<div className="col-md-4">
+						<div className="dinasourList">
+							<List />
+							<div id="dinasourListBorderTop"></div>
 						</div>
 					</div>
 				</div>
