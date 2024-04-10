@@ -94,7 +94,7 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="container">
+			<div>
 				<footer className="footer">
 					<Footer />
 				</footer>

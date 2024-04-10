@@ -1,5 +1,4 @@
 #footer {
-    /* background-color: #2D9596; */
     background-color: #008080;
     color: white;
     width: 100%;
@@ -17,7 +16,7 @@
     font-size: 1.2rem;
 }
 
-#testing a {
+#iconContainer a {
     text-decoration: none;
     color: white;
 }
