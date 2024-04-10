@@ -41,3 +41,7 @@ export const getDinoNews = async () => {
     console.error(error);
   }
 };
+
+export const randomiseGeoCoords = (min, max) => {
+	return Math.random() * (max - min) + min;
+}

@@ -7,6 +7,7 @@ import {
 import { useContext, useState, useMemo, useRef } from "react";
 import { AppContext } from "../context/Context";
 
+
 function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;

@@ -101,7 +101,7 @@ function Search() {
   };
 
   const handleSubmit = () => {
-    console.log(searchObj);
+    //console.log(searchObj);
     searchDinosaurs(searchObj);
   };
 
