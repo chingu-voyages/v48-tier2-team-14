@@ -7,7 +7,6 @@ import {
 import { useContext, useState, useMemo, useRef } from "react";
 import { AppContext } from "../context/Context";
 
-
 function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
@@ -46,7 +45,12 @@ function Map() {
   return (
     <APIProvider apiKey={apiKey}>
       <div style={{ height: "700px" }}>
-        <DinoMap defaultZoom={zoom} defaultCenter={mapCenter} mapId={mapId}>
+        <DinoMap
+          minZoom={zoom}
+          defaultZoom={zoom}
+          defaultCenter={mapCenter}
+          mapId={mapId}
+        >
           {locationCoordinates.flatMap(({ dinosaur, coordinates }, idx) =>
             coordinates.map((coordinate, index) => {
               const popupIndex = `${dinosaur.name}-${idx}-${index}`;
