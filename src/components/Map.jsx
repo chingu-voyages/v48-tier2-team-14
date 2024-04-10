@@ -6,6 +6,7 @@ import {
 } from "@vis.gl/react-google-maps";
 import { useContext, useState, useMemo, useRef } from "react";
 import { AppContext } from "../context/Context";
+import { MarkerClusterer } from "@googlemaps/markerclusterer";
 
 function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
@@ -14,6 +15,7 @@ function Map() {
   const mapCenter = { lat: 0, lng: 0 };
   const { locationCoordinates } = useContext(AppContext);
   const [openPopups, setOpenPopups] = useState([]);
+  const noDinoImage = "N/A";
 
   const markerRefs = useRef([]);
 
@@ -70,11 +72,19 @@ function Map() {
                     >
                       <h3>{dinosaur.name}</h3>
                       <div className="img-container">
-                        <img
-                          className="popup-img"
-                          src={dinosaur.imageSrc}
-                          alt={dinosaur.name}
-                        />
+                        {dinosaur.imageSrc === noDinoImage ? (
+                          <img
+                            className="popup-img"
+                            src="/dinosaur-placeholder.png"
+                            alt={dinosaur.name}
+                          />
+                        ) : (
+                          <img
+                            className="popup-img"
+                            src={dinosaur.imageSrc}
+                            alt={dinosaur.name}
+                          />
+                        )}
                       </div>
                     </InfoWindow>
                   )}
