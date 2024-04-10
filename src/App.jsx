@@ -3,6 +3,7 @@ import "./styles/Charts.css";
 import "./styles/Map.css";
 import "./styles/LoadingPage.css";
 import "./styles/DinosaurNews.css";
+import "./styles/Search.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { data, data2 } from "./data";
 //import { useEffect } from "react";
@@ -12,8 +13,10 @@ import { AppProvider } from "./context/Context";
 import DinosaurNews from "./components/DinosaurNews";
 import Search from "./components/Search";
 import Map from "./components/Map";
+import List from './components/List'
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import Footer from "./components/Footer";
+import DinasourDetails from "./components/DinasourDetails";
 
 function App() {
 	return (
@@ -51,27 +54,41 @@ function App() {
 								description: "N/A",
 							}}
 						/>
+						<div className="row">
+              <div className="col-md-6">
+							<div className="mb-3">
+								<div className="pie-chart">
+									<PieChart data={data} />
+								</div>
+							</div>
+                
+              </div>
+              <div className="col-md-6">
+							<div>
+								<div className="donut-chart">
+									<DonutChart data={data2} />
+								</div>
+							</div>
+                
+              </div>
+
+						</div>
 					</div>
 
-					<div className="col-md-4">
-						<div className="mb-3">
-							<div className="pie-chart">
-								<PieChart data={data} />
-							</div>
-						</div>
+          <div className="col-md-4">
+            <List/>
+          </div>
+				</div>
 
-						<div>
-							<div className="donut-chart">
-								<DonutChart data={data2} />
-							</div>
-						</div>
+				<div className="row">
+					<div className="col-md-12">
+						<DinosaurNews />
 					</div>
 				</div>
 
 				<div className="row">
 					<div className="col-md-12">
-						{/* <DinosaurDisplay /> */}
-						<DinosaurNews />
+						<DinasourDetails />
 					</div>
 				</div>
 			</div>

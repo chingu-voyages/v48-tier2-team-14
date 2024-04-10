@@ -1,0 +1,73 @@
+h4 {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 5rem;
+}
+
+.full-container {
+  display: grid;
+  /* border: solid red 5px; */
+  grid-template-columns: 1fr 3fr;
+  margin-top: 2rem;
+  padding: 0rem 10rem 0rem 10rem;
+}
+
+.inner-right-container {
+  display: flex;
+  border-right: 2px solid #d5d5d5;
+  border-left: 2px solid #d5d5d5;
+  border-bottom: 2px solid #d5d5d5;
+  border-top: 2px solid #008080;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.inner-left-container {
+  span {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 2rem;
+  /* border: 2px solid red; */
+}
+.inner-left-container-details {
+}
+
+.dinasour-img {
+  width: 400px;
+  height: 220px;
+  margin-bottom: 1rem;
+}
+
+.section-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  background-color: #edfafa;
+  border-radius: 5px;
+  color: #008080;
+  position: relative;
+  top: -2rem;
+}
+
+.save-btn {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #008080;
+  border: none;
+}

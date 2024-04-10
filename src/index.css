@@ -1,0 +1,22 @@
+#footer {
+    background-color: #2D9596;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#footerContainer {
+    width: 90%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+#githubIcon {
+    font-size: 1.2rem;
+}
+
+#testing a {
+    text-decoration: none;
+    color: white;
+}

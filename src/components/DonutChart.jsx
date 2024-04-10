@@ -3,16 +3,32 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const DonutChart = () => {
-  const { type } = useContext(AppContext);
+  const { type, data, setData } = useContext(AppContext);
+
+	const handleClick = (slice) => {
+		console.log("Slice clicked", slice);
+		const clickedId = slice.id;
+		const filteredChart = data.filter(
+			(dinosaur) => dinosaur.typeOfDinosaur === clickedId
+		);
+		console.log(filteredChart);
+		setData(filteredChart);
+	};
+	
 	return (
 		<>
-			<h4 className="display-12 text-center">Type of Dinasour</h4>
+			<div className="headerText">
+				<h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
+					dinosaur types
+				</h6>
+			</div>
 			<ResponsivePieCanvas
 				data={type}
-				margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
+				margin={{ top: 40, right: 200, bottom: 50, left: 80 }}
 				innerRadius={0.5}
 				padAngle={0.7}
 				cornerRadius={3}
+				onClick={handleClick}
 				activeOuterRadiusOffset={8}
 				colors={{ scheme: "paired" }}
 				borderColor={{
