@@ -32,16 +32,15 @@
 	top: 0;
 	height: 50px;
 	width: 46.5%;
-	border-top: 2px solid #2D9596;
+	border-top: 2px solid #008080;
 }
 
 .headerText > h6 {
 	position: absolute;
 	width: 50%;
 	top: -0.6rem;
-	color: #2D9596;
-	background: #DFF5FF;
-	/* margin-top: 2rem; */
+	color: #008080;
+	background-color: #edfafa;
 }
 
 .dinasourList {
@@ -62,5 +61,5 @@
 	top: 0;
 	height: 50px;
 	width: 45%;
-	border-top: 2px solid #2D9596;
+	border-top: 2px solid #008080;
 }
