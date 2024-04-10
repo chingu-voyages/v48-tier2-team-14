@@ -1,44 +1,44 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .pie-chart {
-	display: flex;
-	flex-direction: column;
-	border-left: 2px solid lightgray;
-	border-right: 2px solid lightgray;
-	border-bottom: 2px solid lightgray;
-	position: relative;
-	width: 100%;
-	height: 330px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid lightgray;
+  border-right: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  position: relative;
+  width: 100%;
+  height: 330px;
 }
 
 .donut-chart {
-	display: flex;
-	flex-direction: column;
-	border-left: 2px solid lightgray;
-	border-right: 2px solid lightgray;
-	border-bottom: 2px solid lightgray;
-	position: relative;
-	height: 335px;
-  	width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid lightgray;
+  border-right: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  position: relative;
+  height: 335px;
+  width: 100%;
 }
 
 .borderTop:before {
-	content: "";
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 50px;
-	width: 45%;
-	border-top: 2px solid #2D9596;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 45%;
+  border-top: 2px solid #2d9596;
 }
 
 .headerText > h6 {
-	position: absolute;
-	width: 50%;
-	top: -0.5rem;
-	color: #2D9596;
-	background: #DFF5FF;
+  position: absolute;
+  width: 50%;
+  top: -0.5rem;
+  color: #2d9596;
+  background: #dff5ff;
 }
