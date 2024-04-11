@@ -26,7 +26,6 @@ function App() {
           <div className="col-md-12">
             <Navbar />
           </div>
-          {/* <div className="col-md-4"></div> */}
         </div>
         <div className="row">
           <div className="col-md-11" id="searchBar">
@@ -37,21 +36,41 @@ function App() {
           <div className="col-md-8">
             <Map />
           </div>
+        </div>
 
-          <div className="col-md-4">
+        <div className="row mt-4 position-relative">
+					<div className="col-md-4">
+						<div className="pie-chart">
+							<PieChart data={data} />
+							<div className="borderTop"></div>
+						</div>
+					</div>
+
+					<div className="col-md-4 mt-md-0 mt-4">
+						<div className="donut-chart">
+							<DonutChart data={data2} />
+							<div className="borderTop"></div>
+						</div>
+					</div>
+
+					<div className="col-md-4">
 						<div className="dinasourList">
 							<List />
 							<div id="dinasourListBorderTop"></div>
 						</div>
 					</div>
-        </div>
+				</div>
+				<div className="row">
+					<div className="col-md-12">
+						<DinosaurNews />
+					</div>
+				</div>
 
-        <div className="row">
-          <div className="col-md-12">
-            {/* <DinosaurDisplay /> */}
-            <DinosaurNews />
-          </div>
-        </div>
+				<div className="row">
+					<div className="col-md-12">
+						<DinasourDetails />
+					</div>
+				</div>
       </div>
       <div className="container">
         <footer className="footer">
