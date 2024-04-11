@@ -14,6 +14,7 @@ const PieChart = () => {
     console.log(filteredChart);
     setData(filteredChart);
     setMatchedItems(filteredChart);
+
   };
 
   return (

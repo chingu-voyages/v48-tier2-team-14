@@ -14,10 +14,12 @@ const DonutChart = () => {
     console.log(filteredChart);
     setData(filteredChart);
     setMatchedItems(filteredChart);
+
   };
 
   return (
     <>
+
       <h4 className="display-12 text-center">Type of Dinasour</h4>
       <ResponsivePieCanvas
         data={type}

@@ -11,9 +11,12 @@ import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
 import Search from "./components/Search";
 import Map from "./components/Map";
+import List from './components/List'
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import DinosaurNews from "./components/DinosaurNews";
 import Footer from "./components/Footer";
+import DinasourDetails from "./components/DinasourDetails";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (

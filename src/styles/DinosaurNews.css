@@ -146,3 +146,19 @@
   text-align: center;
   margin-top: 4rem;
 }
+
+
+@media(max-width: 768px) {
+  .articles {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-card {
+    width: 100%;
+  }
+
+  .news-intro {
+    margin: 1rem;
+  }
+}
