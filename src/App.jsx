@@ -51,7 +51,7 @@ function App() {
 							<div className="borderTop"></div>
 						</div>
 					</div>
-
+          
 					<div className="col-md-4 mt-md-0 mt-4">
 						<div className="donut-chart">
 							<DonutChart data={data2} />
@@ -66,18 +66,20 @@ function App() {
 						</div>
 					</div>
 				</div>
-				<div className="row">
-					<div className="col-md-12">
-						<DinosaurNews />
-					</div>
-				</div>
+      </div>
 
-				<div className="row">
+			<div className="col-md-12">
+				<DinosaurNews />
+			</div>
+    
+      <div className="container">
+        <div className="row">
 					<div className="col-md-12">
 						<DinasourDetails />
 					</div>
 				</div>
       </div>
+
       <div>
         <footer className="footer">
           <Footer />
