@@ -17,23 +17,24 @@ import List from './components/List'
 import DinosaurDisplay from "./components/DinosaurDisplay";
 import Footer from "./components/Footer";
 import DinasourDetails from "./components/DinasourDetails";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<AppProvider>
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-8">
-						<h1 className="display-6">Dino Studio</h1>
+					<div className="col-md-12">
+						<Navbar />
 					</div>
-					<div className="col-md-4"></div>
+					{/* <div className="col-md-4"></div> */}
 				</div>
 				<div className="row">
 					<div className="col-md-11" id="searchBar">
 						<Search />
 					</div>
 				</div>
-				<div className="row d-flex overflow-hidden">
+				<div className="row d-flex mt-4">
 					<div className="col-md-8">
 						<Map
 							selectedDinosaur={{
@@ -54,31 +55,32 @@ function App() {
 								description: "N/A",
 							}}
 						/>
-						<div className="row">
-              <div className="col-md-6">
-							<div className="mb-3">
-								<div className="pie-chart">
-									<PieChart data={data} />
-								</div>
-							</div>
-                
-              </div>
-              <div className="col-md-6">
-							<div>
-								<div className="donut-chart">
-									<DonutChart data={data2} />
-								</div>
-							</div>
-                
-              </div>
+					</div>
+				</div>
 
+				<div className="row mt-4 position-relative">
+					<div className="col-md-4">
+						<div className="pie-chart">
+							<PieChart data={data} />
+							<div className="borderTop"></div>
 						</div>
 					</div>
 
-          <div className="col-md-4">
-            <List/>
-          </div>
+					<div className="col-md-4 mt-md-0 mt-4">
+						<div className="donut-chart">
+							<DonutChart data={data2} />
+							<div className="borderTop"></div>
+						</div>
+					</div>
+
+					<div className="col-md-4">
+						<div className="dinasourList">
+							<List />
+							<div id="dinasourListBorderTop"></div>
+						</div>
+					</div>
 				</div>
+			
 
 				<div className="row">
 					<div className="col-md-12">
@@ -92,7 +94,7 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="container">
+			<div>
 				<footer className="footer">
 					<Footer />
 				</footer>

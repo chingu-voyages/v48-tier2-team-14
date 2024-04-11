@@ -71,3 +71,14 @@ h4 {
   background-color: #008080;
   border: none;
 }
+
+.save-btn:hover {
+  background-color: #2D9596;
+}
+
+@media(max-width: 768px) {
+  .full-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
