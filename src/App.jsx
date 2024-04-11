@@ -21,14 +21,14 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <AppProvider>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col-md-12">
             <Navbar />
           </div>
         </div>
         <div className="row">
-          <div className="col-md-11" id="searchBar">
+          <div className="col-md-12" id="searchBar">
             <Search />
           </div>
         </div>
