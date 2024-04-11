@@ -56,8 +56,8 @@ const DinasourDetails = () => {
           <button className="save-btn">Save</button>
         </aside>
         <aside className="inner-right-container">
-          <h3 className="section-label">
-            DINASOUR DETAILS <hr />
+          <h3 className="section-label text-uppercase py-1">
+            dinasour details
           </h3>
           <h3 style={{ marginBottom: "2rem" }}>{name}</h3>
           <h4>Description</h4>

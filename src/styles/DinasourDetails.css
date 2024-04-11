@@ -22,16 +22,6 @@ h4 {
   padding: 1rem;
 }
 
-#detailsBorderTop {
-  content: "";
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 50px;
-	width: 46.5%;
-	border-top: 2px solid #008080;
-}
-
 .inner-left-container {
   span {
     font-family: "IBM Plex Serif", serif;
@@ -70,6 +60,17 @@ h4 {
   color: #008080;
   position: relative;
   top: -2rem;
+  left: -0.55rem;
+}
+
+#detailsBorderTop {
+  content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 50px;
+	width: 52.5%;
+	border-top: 2px solid #008080;
 }
 
 .save-btn {
