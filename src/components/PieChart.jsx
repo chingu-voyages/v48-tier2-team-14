@@ -5,6 +5,7 @@ import { AppContext } from "../context/Context";
 const PieChart = () => {
   const { diet, data, setData } = useContext(AppContext);
 
+  //click method
   const handleClick = (slice) => {
     console.log("Slice clicked", slice);
     const clickedId = slice.id;
