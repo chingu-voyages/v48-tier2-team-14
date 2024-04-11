@@ -67,6 +67,7 @@ const DinasourDetails = () => {
           <p>{taxonomy}</p>
           <h4>When Lived</h4>
           <p>{whenLived}</p>
+          <div id="detailsBorderTop"></div>
         </aside>
       </div>
     </>
