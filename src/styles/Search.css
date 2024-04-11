@@ -21,12 +21,13 @@
 
 #searchBtn {
 	cursor: pointer;
-	background-color: #008080;
+	background: #2D9596;
 	color: white;
 }
 
 #searchBtn:hover {
-	background-color: #2D9596;
+	background: #DFF5FF;
+	color: #2D9596;
 }
 
 
