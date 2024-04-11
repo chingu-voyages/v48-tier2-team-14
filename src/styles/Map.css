@@ -1,28 +1,12 @@
-.popup {
-  max-width: 100%;
-  max-height: auto;
-}
-
 .popup-img {
-  height: 200px;
+  height: 150px;
   width: auto;
 }
 
-.map-container {
+.img-container {
   display: flex;
-	flex-direction: column;
-	border-left: 2px solid lightgray;
-	border-right: 2px solid lightgray;
-	border-bottom: 2px solid lightgray;
-	position: relative;
-}
-
-#mapBorderTop {
-	content: "";
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 50px;
-	width: 47.5%;
-	border-top: 2px solid #008080;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }

@@ -19,7 +19,7 @@ export const getLocationCoordinates = async (locationName) => {
 
     if (data.results && data.results.length > 0) {
       const { lat, lng } = data.results[0].geometry.location;
-      return [lat, lng];
+      return { lat, lng }; // Return an object with lat and lng properties
     } else {
       throw new Error("No results found for this location.");
     }
@@ -28,7 +28,6 @@ export const getLocationCoordinates = async (locationName) => {
     return null;
   }
 };
-
 const newsApiKey = import.meta.env.VITE_G_NEWS_API_KEY;
 
 export const getDinoNews = async () => {
@@ -42,3 +41,7 @@ export const getDinoNews = async () => {
     console.error(error);
   }
 };
+
+export const randomiseGeoCoords = (min, max) => {
+	return Math.random() * (max - min) + min;
+}

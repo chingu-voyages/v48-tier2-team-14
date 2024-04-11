@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const DonutChart = () => {
-  const { type, data, setData } = useContext(AppContext);
+  const { type, data, setData, setMatchedItems } = useContext(AppContext);
 
   const handleClick = (slice) => {
     console.log("Slice clicked", slice);
@@ -13,20 +13,17 @@ const DonutChart = () => {
     );
     console.log(filteredChart);
     setData(filteredChart);
+    setMatchedItems(filteredChart);
+
   };
 
   return (
     <>
-      <div className="headerText">
-        <h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
-          dinosaur types
-        </h6>
-      </div>
+
+      <h4 className="display-12 text-center">Type of Dinasour</h4>
       <ResponsivePieCanvas
-        width={450}
-        height={500}
         data={type}
-        margin={{ top: 0, right: 200, bottom: 150, left: 100 }}
+        margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
@@ -43,7 +40,6 @@ const DonutChart = () => {
         arcLinkLabelsColor={{ from: "color" }}
         arcLabelsSkipAngle={10}
         arcLabelsTextColor="#333333"
-        enableArcLinkLabels={false}
         defs={[
           {
             id: "dots",
@@ -69,7 +65,7 @@ const DonutChart = () => {
             anchor: "right",
             direction: "column",
             justify: false,
-            translateX: 100,
+            translateX: 140,
             translateY: 0,
             itemsSpacing: 2,
             itemWidth: 60,
