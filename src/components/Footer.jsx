@@ -7,11 +7,11 @@ function Footer() {
                 <div className="row overflow-hidden" id="footerContainer">
                     <div className="col-md-3 col-7">
                         <h5>Dino Studio</h5>
-                        <p className="mt-3">Copyright &copy; 2024 | Chingu</p>
+                        <p>Copyright &copy; 2024 | Chingu</p>
                     </div>
                     <div className="col-md-2 col-5">
                         <p>Chingu team 14</p>
-                        <div className="d-inline-flex" id="iconContainer">
+                        <div className="d-inline-flex" id="testing">
                             <p>Follow Us</p>
                             <a href="https://github.com/chingu-voyages/v48-tier2-team-14">
                                 <FaGithub className="mx-2" id="githubIcon" />

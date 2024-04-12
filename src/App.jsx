@@ -16,7 +16,6 @@ import DinosaurDisplay from "./components/DinosaurDisplay";
 import DinosaurNews from "./components/DinosaurNews";
 import Footer from "./components/Footer";
 import DinasourDetails from "./components/DinasourDetails";
-import Navbar from "./components/Navbar";
 
 function App() {
   return (

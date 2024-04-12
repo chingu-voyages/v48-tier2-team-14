@@ -46,64 +46,32 @@ function Map() {
   };
 
   return (
-    <APIProvider apiKey={apiKey}>
-      <div style={{ height: "700px" }}>
-        <DinoMap
-          minZoom={zoom}
-          defaultZoom={zoom}
-          defaultCenter={mapCenter}
-          mapId={mapId}
-          streetViewControl={false}
-          mapTypeControl={false}
-        >
-          {locationCoordinates.flatMap(({ dinosaur, coordinates }, idx) =>
-            coordinates.map((coordinate, index) => {
-              const popupIndex = `${dinosaur.name}-${idx}-${index}`;
-              return (
-                <div key={popupIndex}>
-                  <AdvancedMarker
-                    ref={(ref) => (markerRefs.current[popupIndex] = ref)}
-                    position={coordinate}
-                    onClick={() => handleMarkerClick(popupIndex)}
-                  >
-                    <Pin
-                      background={"#008080"}
-                      glyphColor={"#ffd60a"}
-                      borderColor={"#000"}
-                    />
-                  </AdvancedMarker>
-                  {openPopups[popupIndex] && (
-                    <InfoWindow
-                      anchor={markerRefs.current[popupIndex]}
-                      maxWidth="100%"
-                      height="auto"
-                      onCloseClick={() => handleWindowClose(popupIndex)}
-                    >
-                      <h3>{dinosaur.name}</h3>
-                      <div className="img-container">
-                        {dinosaur.imageSrc === noDinoImage ? (
-                          <img
-                            className="popup-img"
-                            src="/dinosaur-placeholder.png"
-                            alt={dinosaur.name}
-                          />
-                        ) : (
-                          <img
-                            className="popup-img"
-                            src={dinosaur.imageSrc}
-                            alt={dinosaur.name}
-                          />
-                        )}
-                      </div>
-                    </InfoWindow>
-                  )}
-                </div>
-              );
-            })
-          )}
-        </DinoMap>
-      </div>
-    </APIProvider>
+    <div className="map-container">
+      <MapContainer
+        center={[0, 0]}
+        zoom={2}
+        style={{ height: "700px", width: "full" }}
+      >
+        <TileLayer
+          attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+          url="https://api.maptiler.com/maps/topo-v2/{z}/{x}/{y}.png?key=UO8c2dxT8Xs4hzn7JgSo"
+        />
+        {locationCoordinates.map(({ location, coordinates }) => (
+          <Marker key={location} position={coordinates} icon={customIcon}>
+            <Popup maxWidth="100%" maxHeight="auto">
+              <h3>{selectedDinosaur.name}</h3>
+              <div className="img-container">
+                <img
+                  className="popup-img"
+                  src={selectedDinosaur.imageSrc}
+                  alt={selectedDinosaur.name}
+                />
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </div>
   );
 }
 
