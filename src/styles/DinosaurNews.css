@@ -159,11 +159,6 @@
 
 
 @media(max-width: 768px) {
-  .news-container {
-    width: 90%;
-    margin: auto;
-  }
-
   .articles {
     display: flex;
     flex-direction: column;
@@ -179,12 +174,5 @@
 
   .news-intro {
     margin: 1rem;
-  }
-
-}
-
-@media(max-width: 1024px) {
-  .news-card {
-    height: 120%;
   }
 }

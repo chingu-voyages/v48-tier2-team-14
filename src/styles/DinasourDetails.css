@@ -103,6 +103,7 @@ h4 {
 
   .inner-left-container {
     width: 100%;
+    margin-top: 3rem;
   }
 
   inner-left-container-img {
@@ -110,13 +111,7 @@ h4 {
   }
 
   .dinasour-img {
-    /* width: 20em; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* margin-right: 2em; */
-    outline: 1px solid green;
+    object-fit: cover;
   }
 
   .section-label {
