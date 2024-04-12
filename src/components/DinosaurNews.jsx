@@ -8,6 +8,7 @@ export default function DinosaurNews() {
 
   return (
     <div className="news-container mt-5">
+      <div id="styled-container">
       <h2 className="news-heading">Latest News</h2>
       <p className="news-intro">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed inventore
@@ -79,6 +80,7 @@ export default function DinosaurNews() {
       >
         {btnText}
       </button>
+      </div>
     </div>
   );
 }
