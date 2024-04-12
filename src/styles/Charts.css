@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
 .pie-chart, .donut-chart {
 	display: flex;
 	flex-direction: column;
@@ -14,28 +13,6 @@
 	position: relative;
 	width: 100%;
 	height: 330px;
-=======
-.pie-chart {
-  display: flex;
-  flex-direction: column;
-  border-left: 2px solid lightgray;
-  border-right: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
-  position: relative;
-  width: 100%;
-  height: 330px;
-}
-
-.donut-chart {
-  display: flex;
-  flex-direction: column;
-  border-left: 2px solid lightgray;
-  border-right: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
-  position: relative;
-  height: 335px;
-  width: 100%;
->>>>>>> 739b45dbde4dccb83bed50ff587add5b363ccf85
 }
 
 .borderTop:before {
@@ -49,18 +26,10 @@
 }
 
 .headerText > h6 {
-<<<<<<< HEAD
 	position: absolute;
 	width: 50%;
 	top: -0.6rem;
 	color: #008080;
 	background-color: #edfafa;
 	border-radius: 5px;
-=======
-  position: absolute;
-  width: 50%;
-  top: -0.5rem;
-  color: #2d9596;
-  background: #dff5ff;
->>>>>>> 739b45dbde4dccb83bed50ff587add5b363ccf85
 }
