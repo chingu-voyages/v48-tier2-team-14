@@ -10,7 +10,6 @@ h4 {
   grid-template-columns: 1fr 3fr;
   margin-top: 5rem;
   margin-bottom: 4rem;
-  /* outline: 1px solid red; */
 }
 
 .inner-right-container {
@@ -19,6 +18,7 @@ h4 {
   position: relative;
   border-right: 2px solid #d5d5d5;
   border-left: 2px solid #d5d5d5;
+  border-top-left-radius: 5px;
   border-bottom: 2px solid #d5d5d5;
   padding: 1rem;
 }
@@ -38,17 +38,16 @@ h4 {
   justify-content: center;
   flex-direction: column;
   margin-right: 2rem;
-  border: 2px solid red;
 }
 .inner-left-container-details {
 }
 
 .dinasour-img {
-  /* width: 400px; */
-  width: 100%;
+  width: 400px;
   height: 220px;
   margin-bottom: 1rem;
-  /* border: 2px solid red; */
+  position: relative;
+  top: -2.4rem;
 }
 
 .section-label {
@@ -83,6 +82,7 @@ h4 {
   color: white;
   background-color: #008080;
   border: none;
+  margin-top: 2rem;
 }
 
 .save-btn:hover {
@@ -99,23 +99,26 @@ h4 {
     flex-direction: column;
     width: 95%;
     margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .inner-left-container {
     width: 100%;
-    margin-top: 3rem;
-  }
-
-  inner-left-container-img {
-    width: 100%;
   }
 
   .dinasour-img {
-    object-fit: cover;
+    width: 100%;
+    position: relative;
+    top: 0;
   }
 
   .section-label {
     font-size: 1rem;
+  }
+
+  .save-btn {
+    margin-top: 0;
   }
   
   .inner-right-container {

@@ -28,7 +28,7 @@ const PieChart = () => {
         data={diet}
         width={500}
         height={500}
-        margin={{ top: 0, right: 200, bottom: 200, left: 100 }}
+        margin={{ top: 0, right: 200, bottom: 180, left: 60 }}
         valueFormat={(value) => `${value}%`}
         padAngle={0.7}
         onClick={handleClick}

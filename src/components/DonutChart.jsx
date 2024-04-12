@@ -26,7 +26,7 @@ const DonutChart = () => {
 			</div>
       <ResponsivePieCanvas
         data={type}
-        margin={{ top: 40, right: 200, bottom: 150, left: 80 }}
+        margin={{ top: 40, right: 0, bottom: 80, left: 0 }}
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}

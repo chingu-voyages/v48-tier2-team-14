@@ -33,7 +33,7 @@ function App() {
           </div>
         </div>
         <div className="row d-flex">
-          <div className="col-md-8 mt-4" id="map-container"> 
+          <div className="col-md-8 mt-5" id="map-container"> 
             {/* <div className="headerText">
 				      <h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
 					      dinosaur lists
@@ -45,21 +45,21 @@ function App() {
         </div>
 
         <div className="row mt-4 position-relative">
-					<div className="col-md-4">
+					<div className="col-md-4 mt-md-0 mt-4 pt-md-2">
 						<div className="pie-chart">
 							<PieChart data={data} />
 							<div className="borderTop"></div>
 						</div>
 					</div>
 
-					<div className="col-md-4 mt-md-0 mt-4">
+					<div className="col-md-4 mt-md-0 mt-5 pt-md-2">
 						<div className="donut-chart">
 							<DonutChart data={data2} />
 							<div className="borderTop"></div>
 						</div>
 					</div>
 
-					<div className="col-md-4">
+					<div className="col-md-4 mt-md-0 mt-4 mb-md-0 mb-4">
 						<div className="dinasourList">
 							<List />
 							<div id="dinasourListBorderTop"></div>
