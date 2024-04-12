@@ -18,7 +18,7 @@
   font-family: Montserrat;
   font-size: 54px;
   font-weight: 700;
-  line-height: 78px;
+  /* line-height: 78px; */
   letter-spacing: 0.02em;
   text-align: left;
 }
@@ -151,6 +151,11 @@
 
 
 @media(max-width: 768px) {
+  .news-container {
+    width: 90%;
+    margin: auto;
+  }
+
   .articles {
     display: flex;
     flex-direction: column;
@@ -160,7 +165,12 @@
     width: 100%;
   }
 
+  .news-heading {
+    font-size: 1rem;
+  }
+
   .news-intro {
     margin: 1rem;
   }
+
 }
