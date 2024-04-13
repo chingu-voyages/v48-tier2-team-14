@@ -20,31 +20,31 @@ import DinasourDetails from "./components/DinasourDetails";
 
 function App() {
   return (
-    <AppProvider>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <Navbar />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <Search />
-          </div>
-        </div>
-        <div className="row d-flex">
-          <div className="col-md-8 mt-5" id="map-container"> 
-            {/* <div className="headerText">
+		<AppProvider>
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12">
+						<Navbar />
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-md-12">
+						<Search />
+					</div>
+				</div>
+				<div className="row d-flex">
+					<div className="col-md-8 mt-5" id="map-container">
+						{/* <div className="headerText">
 				      <h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
 					      dinosaur lists
 				      </h6>
 			      </div> */}
-            <Map />
-            {/* <div id="mapBorderTop"></div> */}
-          </div>
-        </div>
+						<Map />
+						{/* <div id="mapBorderTop"></div> */}
+					</div>
+				</div>
 
-        <div className="row mt-4 position-relative">
+				<div className="row mt-4 position-relative">
 					<div className="col-md-4 mt-md-0 mt-4 pt-md-2">
 						<div className="pie-chart">
 							<PieChart data={data} />
@@ -66,27 +66,26 @@ function App() {
 						</div>
 					</div>
 				</div>
-      </div>
+			</div>
 
-    
-      <div className="container">
-        <div className="row">
+			<div className="container">
+				<div className="row">
 					<div className="col-md-12">
 						<DinasourDetails />
 					</div>
 				</div>
-      </div>
-			<div className="col-md-12">
+			</div>
+			<div className="col-md-12" id="dinoNews">
 				<DinosaurNews />
 			</div>
 
-      <div>
-        <footer className="footer">
-          <Footer />
-        </footer>
-      </div>
-    </AppProvider>
-  );
+			<div>
+				<footer className="footer" id="footer">
+					<Footer />
+				</footer>
+			</div>
+		</AppProvider>
+	);
 }
 
 export default App;
