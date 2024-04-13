@@ -16,11 +16,6 @@
     font-size: 1.2rem;
 }
 
-#testing a {
-    text-decoration: none;
-    color: white;
-}
-
 .dinasourList {
 	display: flex;
 	flex-direction: column;
