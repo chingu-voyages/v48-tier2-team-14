@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: start;
   border-radius: 5px;
-  height: 500px;
+  height: 650px;
   /* height: 80vh; */
   /* height: 120%; */
   /* width: 390px; */
@@ -157,8 +157,7 @@
   color: #008080;
 }
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .articles {
     display: flex;
     flex-direction: column;
