@@ -14,9 +14,9 @@
 }
 
 #searchBar {
-	margin-left: 0.2rem;
+	/* margin-left: 0.2rem; */
+	/* margin: auto; */
 	filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2));
-	padding: 0.5rem;
 }
 
 #searchBtn {
@@ -28,6 +28,13 @@
 #searchBtn:hover {
 	background: #DFF5FF;
 	color: #2D9596;
+}
+
+@media(max-width: 768px) {
+	/* #searchBar {
+		width: 100%;
+		margin: auto;
+	} */
 }
 
 

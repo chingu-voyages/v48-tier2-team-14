@@ -20,3 +20,47 @@
     text-decoration: none;
     color: white;
 }
+
+.dinasourList {
+	display: flex;
+	flex-direction: column;
+	border-left: 2px solid lightgray;
+    border-top-left-radius: 5px;
+	border-right: 2px solid lightgray;
+	border-bottom: 2px solid lightgray;
+	position: absolute;
+    top: -45.3rem;
+    width: 32.3%;
+	/* height: 168.3vh; */
+    height: 1062px;
+}
+
+#dinasourListBorderTop {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45%;
+	height: 50px;
+	border-top: 2px solid #008080;
+}
+
+@media(max-width: 786px) {
+    .dinasourList {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 1.5rem;
+    } 
+
+    #dinasourListBorderTop {
+        content: "";
+        position: relative;
+        left: 55%;
+        top: 0;
+        width: 45%;
+        height: 50px;
+        border-top: 2px solid #008080;
+    }
+}

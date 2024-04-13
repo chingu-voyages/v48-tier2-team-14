@@ -20,14 +20,16 @@ const PieChart = () => {
 
   return (
     <>
-      <h4 className="display-12 text-center">
-        Distribution of General Dinosaur Diets
-      </h4>
+      <div className="headerText">
+				<h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
+					dinosaur lists
+				</h6>
+			</div>
       <Pie
         data={diet}
         width={500}
         height={500}
-        margin={{ top: 0, right: 200, bottom: 200, left: 100 }}
+        margin={{ top: 0, right: 200, bottom: 180, left: 60 }}
         valueFormat={(value) => `${value}%`}
         padAngle={0.7}
         onClick={handleClick}

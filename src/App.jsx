@@ -18,70 +18,74 @@ import Footer from "./components/Footer";
 import DinasourDetails from "./components/DinasourDetails";
 
 function App() {
+  return (
+    <AppProvider>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <Navbar />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12" id="searchBar">
+            <Search />
+          </div>
+        </div>
+        <div className="row d-flex">
+          <div className="col-md-8 mt-5" id="map-container"> 
+            {/* <div className="headerText">
+				      <h6 className="display-12 text-uppercase w-50 mx-1 text-center py-1">
+					      dinosaur lists
+				      </h6>
+			      </div> */}
+            <Map />
+            {/* <div id="mapBorderTop"></div> */}
+          </div>
+        </div>
 
-	return (
-		<AppProvider>
-			<div className="container-fluid">
-				<div className="row">
-					<div className="col-md-8">
-						<h1 className="display-6">Dino Studio</h1>
-					</div>
-					<div className="col-md-4"></div>
-				</div>
-				<div className="row">
-					<div className="col-md-11" id="searchBar">
-						<Search />
-					</div>
-				</div>
-				<div className="row d-flex overflow-hidden">
-					<div className="col-md-8">
-						<Map />
-						<div className="row">
-              <div className="col-md-6">
-							<div className="mb-3">
-								<div className="pie-chart">
-									<PieChart data={data} />
-								</div>
-							</div>
-                
-              </div>
-              <div className="col-md-6">
-							<div>
-								<div className="donut-chart">
-									<DonutChart data={data2} />
-								</div>
-							</div>
-                
-              </div>
-
+        <div className="row mt-4 position-relative">
+					<div className="col-md-4 mt-md-0 mt-4 pt-md-2">
+						<div className="pie-chart">
+							<PieChart data={data} />
+							<div className="borderTop"></div>
 						</div>
 					</div>
 
-          <div className="col-md-4">
-            <List/>
-          </div>
-				</div>
+					<div className="col-md-4 mt-md-0 mt-5 pt-md-2">
+						<div className="donut-chart">
+							<DonutChart data={data2} />
+							<div className="borderTop"></div>
+						</div>
+					</div>
 
-				<div className="row">
-					<div className="col-md-12">
-						<DinosaurNews />
+					<div className="col-md-4 mt-md-0 mt-4 mb-md-0 mb-4">
+						<div className="dinasourList">
+							<List />
+							<div id="dinasourListBorderTop"></div>
+						</div>
 					</div>
 				</div>
+      </div>
 
-				<div className="row">
+			<div className="col-md-12">
+				<DinosaurNews />
+			</div>
+    
+      <div className="container">
+        <div className="row">
 					<div className="col-md-12">
 						<DinasourDetails />
 					</div>
 				</div>
-			</div>
-			<div className="container">
-				<footer className="footer">
-					<Footer />
-				</footer>
-			</div>
-		</AppProvider>
-	);
+      </div>
 
+      <div>
+        <footer className="footer">
+          <Footer />
+        </footer>
+      </div>
+    </AppProvider>
+  );
 }
 
 export default App;
