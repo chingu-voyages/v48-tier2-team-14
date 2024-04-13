@@ -31,7 +31,6 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: left;
-  outline: 2px solid blue;
 }
 
 .typeLocationContainer {
