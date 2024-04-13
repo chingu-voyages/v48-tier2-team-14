@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const DonutChart = () => {
-  const { type, data, setData } = useContext(AppContext);
+	const { type, data, setData } = useContext(AppContext);
 
 	const handleClick = (slice) => {
 		console.log("Slice clicked", slice);
@@ -14,7 +14,7 @@ const DonutChart = () => {
 		console.log(filteredChart);
 		setData(filteredChart);
 	};
-	
+
 	return (
 		<>
 			<div className="headerText">
@@ -23,8 +23,10 @@ const DonutChart = () => {
 				</h6>
 			</div>
 			<ResponsivePieCanvas
+				width={450}
+				height={500}
 				data={type}
-				margin={{ top: 40, right: 200, bottom: 50, left: 80 }}
+				margin={{ top: 20, right: 250, bottom: 275, left: 50 }}
 				innerRadius={0.5}
 				padAngle={0.7}
 				cornerRadius={3}
@@ -41,6 +43,7 @@ const DonutChart = () => {
 				arcLinkLabelsColor={{ from: "color" }}
 				arcLabelsSkipAngle={10}
 				arcLabelsTextColor="#333333"
+				enableArcLinkLabels={false}
 				defs={[
 					{
 						id: "dots",
@@ -66,7 +69,7 @@ const DonutChart = () => {
 						anchor: "right",
 						direction: "column",
 						justify: false,
-						translateX: 140,
+						translateX: 100,
 						translateY: 0,
 						itemsSpacing: 2,
 						itemWidth: 60,

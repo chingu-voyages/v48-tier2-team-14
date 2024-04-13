@@ -5,15 +5,16 @@ import { AppContext } from "../context/Context";
 const PieChart = () => {
 	const { diet, data, setData } = useContext(AppContext);
 
+	//click method
 	const handleClick = (slice) => {
-		console.log('Slice clicked', slice)
+		console.log("Slice clicked", slice);
 		const clickedId = slice.id;
 		const filteredChart = data.filter(
 			(dinosaur) => dinosaur.diet === clickedId
 		);
-		console.log(filteredChart)
+		console.log(filteredChart);
 		setData(filteredChart);
-	}
+	};
 
 	return (
 		<>
@@ -24,9 +25,9 @@ const PieChart = () => {
 			</div>
 			<Pie
 				data={diet}
-				width={500}
-				height={500}
-				margin={{ top: 0, right: 200, bottom: 150, left: 100 }}
+				width={450}
+				height={350}
+				margin={{ top: 25, right: 250, bottom: 150, left: 55 }}
 				valueFormat={(value) => `${value}%`}
 				padAngle={0.7}
 				onClick={handleClick}
@@ -43,6 +44,21 @@ const PieChart = () => {
 				arcLinkLabelsColor={{ from: "color" }}
 				arcLabelsSkipAngle={10}
 				arcLabelsTextColor="#333333"
+				enableArcLinkLabels={false}
+				legends={[
+					{
+						anchor: "right",
+						direction: "column",
+						justify: false,
+						translateX: 120,
+						translateY: 0,
+						itemWidth: 100,
+						itemHeight: 20,
+						itemsSpacing: 0,
+						symbolSize: 10,
+						itemDirection: "left-to-right",
+					},
+				]}
 			/>
 		</>
 	);

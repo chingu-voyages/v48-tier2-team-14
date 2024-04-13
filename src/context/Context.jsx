@@ -1,7 +1,12 @@
 import { createContext, useState, useEffect } from "react";
-import { getFetchData, getDinoNews } from "../global/utils.js";
+import {
+	getFetchData,
+	getDinoNews,
+	getLocationCoordinates,
+} from "../global/utils.js";
 import LoadingPage from "../components/LoadingPage";
 import randomColor from "randomcolor";
+import { randomiseGeoCoords } from "../global/utils.js";
 
 const AppContext = createContext();
 const DINO_API_URL = "https://chinguapi.onrender.com/dinosaurs";
@@ -12,9 +17,12 @@ const AppProvider = ({ children }) => {
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [diet, setDiet] = useState([]);
-	const [country, setCountry] = useState()
+	const [country, setCountry] = useState();
 	const [type, setType] = useState([]);
 	const [dinoNews, setDinoNews] = useState();
+	const [matchedItems, setMatchedItems] = useState([]);
+	const [locationCoordinates, setLocationCoordinates] = useState([]);
+	const [selectedDinosaur, setSelectedDinosaur] = useState(null);
 
 	//------------------------------------- API CALLS --------------------------------------
 
@@ -50,6 +58,8 @@ const AppProvider = ({ children }) => {
 		fetchData();
 	}, []);
 
+	//------------------------------------- NEWS CALL --------------------------------------
+
 	useEffect(() => {
 		const fetchDinoNewsData = async () => {
 			try {
@@ -58,7 +68,7 @@ const AppProvider = ({ children }) => {
 					//console.log("No NewsAPI call made, data in local storage: (dinoNews)");
 					setDinoNews(JSON.parse(storedDinoNews));
 				} else {
-					const newsData = await getDinoNews(); 
+					const newsData = await getDinoNews();
 					//console.log("NewsAPI call made", newsData);
 					setDinoNews(newsData.articles);
 					localStorage.setItem("dinoNews", JSON.stringify(newsData.articles));
@@ -70,6 +80,45 @@ const AppProvider = ({ children }) => {
 
 		fetchDinoNewsData();
 	}, []);
+
+	//------------------------------------- GET LOCATION COORDINATES --------------------------------------
+
+	useEffect(() => {
+		const getCoordinates = async () => {
+			try {
+				if (matchedItems && matchedItems.length > 0) {
+					const coordinatesPromises = matchedItems.map(async (dinosaur) => {
+						const locations = dinosaur.foundIn
+							.split(",")
+							.map((location) => location.trim());
+						const coordinates = await Promise.all(
+							locations.map(getLocationCoordinates)
+						);
+						
+						console.log(coordinates);
+						const jitteredCoordinates = coordinates.map((coord) => ({
+							lat: coord.lat + randomiseGeoCoords(-3.5, 3.5),
+							lng: coord.lng + randomiseGeoCoords(-3.5, 3.5),
+						}));
+
+						return { dinosaur, coordinates: jitteredCoordinates };
+					});
+
+					const dinosaursWithCoordinates = await Promise.all(
+						coordinatesPromises
+					);
+					setLocationCoordinates(dinosaursWithCoordinates);
+					console.log(dinosaursWithCoordinates);
+				} else {
+					setLocationCoordinates([]);
+				}
+			} catch (error) {
+				console.error("Unable to get Coordinates", error);
+			}
+		};
+
+		getCoordinates();
+	}, [matchedItems]);
 
 	//------------------------------------- DINO CHARTS --------------------------------------
 
@@ -154,11 +203,11 @@ const AppProvider = ({ children }) => {
 		diet: "",
 	};
 
-	const [searchObj, setSearchObj] = useState(defaultSearchObj)
+	const [searchObj, setSearchObj] = useState(defaultSearchObj);
 
 	const searchDinosaurs = (searchQuery) => {
 		let matchedItems = responseData;
-		
+
 		if (searchQuery.name.trim() !== "") {
 			matchedItems = matchedItems.filter((dinosaur) =>
 				dinosaur.name.toLowerCase().includes(searchQuery.name.toLowerCase())
@@ -166,9 +215,10 @@ const AppProvider = ({ children }) => {
 		}
 
 		if (searchQuery.country.trim() !== "") {
-			matchedItems = matchedItems.filter(
-				(dinosaur) =>
-					dinosaur.foundIn.toLowerCase().includes(searchQuery.country.toLowerCase())
+			matchedItems = matchedItems.filter((dinosaur) =>
+				dinosaur.foundIn
+					.toLowerCase()
+					.includes(searchQuery.country.toLowerCase())
 			);
 		}
 
@@ -194,11 +244,11 @@ const AppProvider = ({ children }) => {
 					dinosaur.length <= searchQuery.maxLength)
 		);
 
-		console.log("MATCH:", matchedItems);
+		//console.log("MATCH:", matchedItems);
 		setData(matchedItems);
+		setMatchedItems(matchedItems);
 	};
 
-	
 	//------------------------------------- LDRS --------------------------------------
 
 	if (loading) {
@@ -210,7 +260,23 @@ const AppProvider = ({ children }) => {
 	}
 
 	return (
-		<AppContext.Provider value={{ responseData, data, setData, diet, type, dinoNews, searchObj, setSearchObj, searchDinosaurs }}>
+		<AppContext.Provider
+			value={{
+				responseData,
+				data,
+				setData,
+				diet,
+				type,
+				dinoNews,
+				searchObj,
+				setSearchObj,
+				searchDinosaurs,
+				locationCoordinates,
+				setMatchedItems,
+				selectedDinosaur,
+				setSelectedDinosaur
+			}}
+		>
 			{children}
 		</AppContext.Provider>
 	);

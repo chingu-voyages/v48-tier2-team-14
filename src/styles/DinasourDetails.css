@@ -7,19 +7,19 @@ h4 {
 
 .full-container {
   display: grid;
-  /* border: solid red 5px; */
   grid-template-columns: 1fr 3fr;
-  margin-top: 2rem;
-  padding: 0rem 10rem 0rem 10rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
 }
 
 .inner-right-container {
-  display: flex;
+  display: flex; 
+  flex-direction: column;
+  position: relative;
   border-right: 2px solid #d5d5d5;
   border-left: 2px solid #d5d5d5;
+  border-top-left-radius: 5px;
   border-bottom: 2px solid #d5d5d5;
-  border-top: 2px solid #008080;
-  flex-direction: column;
   padding: 1rem;
 }
 
@@ -38,15 +38,16 @@ h4 {
   justify-content: center;
   flex-direction: column;
   margin-right: 2rem;
-  /* border: 2px solid red; */
 }
 .inner-left-container-details {
 }
 
 .dinasour-img {
-  width: 400px;
-  height: 220px;
+  max-width: 400px;
+  max-height: 400px;
   margin-bottom: 1rem;
+  position: relative;
+  top: -2.4rem;
 }
 
 .section-label {
@@ -61,6 +62,17 @@ h4 {
   color: #008080;
   position: relative;
   top: -2rem;
+  left: -0.55rem;
+}
+
+#detailsBorderTop {
+  content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 50px;
+	width: 52.5%;
+	border-top: 2px solid #008080;
 }
 
 .save-btn {
@@ -70,4 +82,56 @@ h4 {
   color: white;
   background-color: #008080;
   border: none;
+  margin-top: 2rem;
+}
+
+.save-btn:hover {
+  background-color: #2D9596;
+}
+
+@media(max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .full-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .inner-left-container {
+    width: 100%;
+  }
+
+  .dinasour-img {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .section-label {
+    font-size: 1rem;
+  }
+
+  .save-btn {
+    margin-top: 0;
+  }
+  
+  .inner-right-container {
+    margin-top: 4rem;
+  }
+
+  #detailsBorderTop {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 10.5%;
+    border-top: 2px solid #008080;
+  }
 }

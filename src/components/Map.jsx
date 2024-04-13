@@ -1,77 +1,109 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
-import { useEffect, useState } from "react";
-import { getLocationCoordinates } from "../global/utils";
+import {
+	APIProvider,
+	Map as DinoMap,
+	AdvancedMarker,
+	InfoWindow,
+	Pin,
+} from "@vis.gl/react-google-maps";
+import { useContext, useState, useMemo, useRef } from "react";
+import { AppContext } from "../context/Context";
 
-const customIcon = new L.Icon({
-  iconUrl: "/assets/dino-print.png",
-  iconSize: [30, 30],
-});
+function Map() {
+	const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+	const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
+	const zoom = 2;
+	const mapCenter = { lat: 0, lng: 0 };
+	const { locationCoordinates } = useContext(AppContext);
+	const [openPopups, setOpenPopups] = useState([]);
+	const noDinoImage = "N/A";
 
-function Map({ selectedDinosaur }) {
-  const [locationCoordinates, setLocationCoordinates] = useState([]);
+	const markerRefs = useRef([]);
 
-  useEffect(() => {
-    const getCoordinates = async () => {
-      try {
-        if (typeof selectedDinosaur.foundIn === "string") {
-          const locations = selectedDinosaur.foundIn
-            .split(",")
-            .map((location) => location.trim());
+	useMemo(() => {
+		const refs = locationCoordinates.flatMap(({ coordinates }) =>
+			coordinates.map(() => ({
+				current: null,
+			}))
+		);
+		markerRefs.current = refs;
+	}, [locationCoordinates]);
 
-          const coordinatesPromises = locations.map(async (location) => {
-            const coordinates = await getLocationCoordinates(location);
-            return { location, coordinates };
-          });
+	const handleMarkerClick = (index) => {
+		setOpenPopups((prevOpenPopups) => {
+			const newOpenPopups = [...prevOpenPopups];
+			newOpenPopups[index] = !newOpenPopups[index];
+			return newOpenPopups;
+		});
+	};
 
-          const locationsWithCoordinates = await Promise.all(
-            coordinatesPromises
-          );
-          setLocationCoordinates(locationsWithCoordinates);
-        } else {
-          console.error("FoundIn is not a string:", selectedDinosaur.foundIn);
-        }
-      } catch (error) {
-        console.error("Unable to get Coordinates", error);
-      }
-    };
+	const handleWindowClose = (index) => {
+		setOpenPopups((prevOpenPopups) => {
+			const newOpenPopups = [...prevOpenPopups];
+			newOpenPopups[index] = false;
+			return newOpenPopups;
+		});
+	};
 
-    if (selectedDinosaur.foundIn) {
-      getCoordinates();
-    }
-  }, [selectedDinosaur]);
-
-  // console.log("Location coordinates:", locationCoordinates);
-
-  return (
-    <div className="map-container">
-      <MapContainer
-        center={[0, 0]}
-        zoom={2}
-        style={{ height: "700px", width: "full" }}
-      >
-        <TileLayer
-          attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-          url="https://api.maptiler.com/maps/topo-v2/{z}/{x}/{y}.png?key=UO8c2dxT8Xs4hzn7JgSo"
-        />
-        {locationCoordinates.map(({ location, coordinates }) => (
-          <Marker key={location} position={coordinates} icon={customIcon}>
-            <Popup maxWidth="100%" maxHeight="auto">
-              <h3>{selectedDinosaur.name}</h3>
-              <div className="img-container">
-                <img
-                  className="popup-img"
-                  src={selectedDinosaur.imageSrc}
-                  alt={selectedDinosaur.name}
-                />
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-    </div>
-  );
+	return (
+		<APIProvider apiKey={apiKey}>
+			<div style={{ height: "532px" }}>
+				<DinoMap
+					minZoom={zoom}
+					defaultZoom={zoom}
+					defaultCenter={mapCenter}
+					mapId={mapId}
+					streetViewControl={false}
+					mapTypeControl={false}
+				>
+					{locationCoordinates.flatMap(({ dinosaur, coordinates }, idx) =>
+						coordinates.map((coordinate, index) => {
+							const popupIndex = `${dinosaur.name}-${idx}-${index}`;
+							return (
+								<div key={popupIndex}>
+									<AdvancedMarker
+										ref={(ref) => (markerRefs.current[popupIndex] = ref)}
+										position={coordinate}
+										onClick={() => handleMarkerClick(popupIndex)}
+									>
+										<Pin
+											background={"#008080"}
+											glyphColor={"#ffd60a"}
+											borderColor={"#000"}
+										/>
+									</AdvancedMarker>
+									{openPopups[popupIndex] && (
+										<InfoWindow
+											anchor={markerRefs.current[popupIndex]}
+											maxWidth="100%"
+											height="auto"
+											onCloseClick={() => handleWindowClose(popupIndex)}
+										>
+											<h3>{dinosaur.name}</h3>
+											<div className="img-container">
+												{dinosaur.imageSrc === noDinoImage ? (
+													<img
+														className="popup-img"
+														src="/dinosaur-placeholder.png"
+														alt={dinosaur.name}
+													/>
+												) : (
+													<img
+														className="popup-img"
+														src={dinosaur.imageSrc}
+														alt={dinosaur.name}
+													/>
+												)}
+											</div>
+										</InfoWindow>
+									)}
+								</div>
+							);
+						})
+					)}
+				</DinoMap>
+			</div>
+		</APIProvider>
+	);
 }
 
 export default Map;

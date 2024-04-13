@@ -1,0 +1,53 @@
+ul {
+	list-style: none;
+}
+
+.dinoItemList {
+  height: 792px; 
+  overflow: scroll;
+}
+
+.dinoItem {
+  display: flex;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #d5d5d5;
+  background-color: transparent;
+}
+
+.imageContainer {
+  margin-right: 0px; 
+}
+
+.listImg {
+  /* Adjust image width as needed */
+  /* width: 85px; */
+  max-height: 85px; /* Maintain aspect ratio */
+
+}
+
+.detailsContainer {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  flex-direction: column;
+  /* text-align: left; */
+}
+
+.typeLocationContainer {
+  display: flex;
+}
+
+.dinoName {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+.dinoType,
+.dinoLocation {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.dinoItem {
+  width: 100%;
+}
