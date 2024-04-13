@@ -7,7 +7,6 @@ import {
 } from "@vis.gl/react-google-maps";
 import { useContext, useState, useMemo, useRef } from "react";
 import { AppContext } from "../context/Context";
-import { MarkerClusterer } from "@googlemaps/markerclusterer";
 
 function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
