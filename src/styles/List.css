@@ -1,0 +1,34 @@
+ul {
+	list-style: none;
+}
+.dinoItem {
+  display: flex;
+}
+
+.imageContainer {
+  margin-right: 0px; 
+}
+
+.listImg {
+  max-width: 85px; /* Adjust image width as needed */
+  max-height: 85px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.typeLocationContainer {
+  display: flex;
+}
+
+.dinoName {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+.dinoType,
+.dinoLocation {
+  margin-right: 10px; /* Adjust as needed */
+}
