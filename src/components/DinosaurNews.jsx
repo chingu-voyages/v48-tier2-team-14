@@ -9,11 +9,12 @@ export default function DinosaurNews() {
   return (
     <div className="news-container mt-5">
       <div id="styled-container">
-      <h2 className="news-heading pt-5">Latest News</h2>
-      <p className="news-intro pb-4 text-center">
-        Dive into the captivating world of dinosaurs with Dinauser's news section, your portal 
-        to exciting discoveries, scientific breakthroughs, and fascinating insights into 
-        pre-historic creatures.
+      <h2 className="news-heading mt-5">Latest News</h2>
+      <p className="news-intro mb-5 text-center">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed inventore
+        perspiciatis quasi! Alias laudantium modi veritatis expedita vel,
+        reiciendis, numquam non beatae debitis dolores voluptatibus voluptatem
+        fuga quae? Tenetur, aspernatur.
       </p>
       <div className="articles">
         {dinoNews &&
