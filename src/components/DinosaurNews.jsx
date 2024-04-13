@@ -9,8 +9,8 @@ export default function DinosaurNews() {
   return (
     <div className="news-container mt-5">
       <div id="styled-container">
-        <h2 className="news-heading">Latest News</h2>
-        <p className="news-intro">
+        <h2 className="news-heading mt-4">Latest News</h2>
+        <p className="news-intro mb-4">
           Dive into the captivating world of dinosaurs with Dinauser's news
           section, your portal to exciting discoveries, scientific
           breakthroughs, and fascinating insights into prehistoric creatures.

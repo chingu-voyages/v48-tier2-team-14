@@ -22,7 +22,8 @@
 
 .news-intro {
   font-size: 1.1rem;
-  width: 1010px;
+  width: 100%;
+  text-align: center;
   color: #2a2a2a;
 }
 
