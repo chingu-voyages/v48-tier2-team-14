@@ -34,6 +34,10 @@
 	font-family: sans-serif;
 }
 
+#dino-intro {
+	width: 1010px;
+}
+
 #dino {
 	color: #008080;
 }

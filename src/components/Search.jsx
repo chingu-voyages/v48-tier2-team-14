@@ -143,7 +143,7 @@ function Search() {
     <>
       <div className="text-center mb-4">
         <p className="findAllDino fs-1 fw-bold">Find all <span id="dino">dinosaurs</span></p>
-        <p>
+        <p id="dino-intro">
           Dive into the captivating world of dinosaurs and uncover their mysteries with our
           in-depth resources. From the towering giants of the past to the swift predators,
           immerse yourself in their fascinating journey through time.
