@@ -149,15 +149,24 @@ function Search() {
           immerse yourself in their fascinating journey through time.
         </p>
       </div>
-      <div className="row d-inline-flex justify-content-between" id="searchBar">
+      <div className='row d-inline-flex justify-content-center' id='topSearch'>
         <input
           placeholder="Search for a dinosuar..."
           type="text"
-          className="col-md-2 rounded-1 border-0 py-2"
+          className="col-md-3 rounded-1 border-0 py-2"
           value={name}
           onChange={handleNameChange}
           onFocus={handleNameFocus}
         ></input>
+        <button className="col-md-1 rounded-1 border-0 py-2" id="searchBtn" onClick={handleSubmit}>
+          Search
+        </button>
+        <button className="col-md-1 rounded-1 border-0 bg-white py-2" id='clearBtn' onClick={clearSearch}>
+          Clear
+        </button>
+
+      </div>
+      <div className="row d-inline-flex justify-content-between" id="searchBar">
         <input
           placeholder="Country"
           type="text"
@@ -210,12 +219,6 @@ function Search() {
           value={maxLength}
           onChange={handleMaxLengthChange}
         ></input>
-        <button className="col-md-1 rounded-1 border-0 py-2" id="searchBtn" onClick={handleSubmit}>
-          Search
-        </button>
-        <button className="col-md-1 rounded-1 border-0 bg-white py-2" onClick={clearSearch}>
-          Clear
-        </button>
       </div>
     </>
   );
