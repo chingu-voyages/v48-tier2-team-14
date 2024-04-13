@@ -55,8 +55,8 @@ function List() {
 								<div className="detailsContainer">
 									<h6 className="dinoName">{dinosaur.name}</h6>
 									<div className="typeLocationContainer">
-										<p className="dinoType">{dinosaur.typeOfDinosaur}</p>
 										<p className="dinoLocation">{dinosaur.foundIn}</p>
+										<p className="dinoType">{dinosaur.typeOfDinosaur}</p>
 									</div>
 								</div>
 							</button>

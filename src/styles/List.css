@@ -29,8 +29,10 @@ ul {
 
 .detailsContainer {
   display: flex;
+  margin: auto;
+  text-align: center;
   flex-direction: column;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .typeLocationContainer {
@@ -44,4 +46,8 @@ ul {
 .dinoType,
 .dinoLocation {
   margin-right: 10px; /* Adjust as needed */
+}
+
+.dinoItem {
+  width: 100%;
 }
