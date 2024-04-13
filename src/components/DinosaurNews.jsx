@@ -11,10 +11,9 @@ export default function DinosaurNews() {
       <div id="styled-container">
       <h2 className="news-heading">Latest News</h2>
       <p className="news-intro">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed inventore
-        perspiciatis quasi! Alias laudantium modi veritatis expedita vel,
-        reiciendis, numquam non beatae debitis dolores voluptatibus voluptatem
-        fuga quae? Tenetur, aspernatur.
+        Dive into the captivating world of dinosaurs with Dinauser's news section, your portal 
+        to exciting discoveries, scientific breakthroughs, and fascinating insights into 
+        pre-historic creatures.
       </p>
       <div className="articles">
         {dinoNews &&
