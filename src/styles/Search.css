@@ -27,7 +27,19 @@
 
 #searchBtn:hover {
 	background: #DFF5FF;
-	color: #2D9596;
+	color: #008080;
+}
+
+.findAllDino {
+	font-family: sans-serif;
+}
+
+#dino-intro {
+	width: 1010px;
+}
+
+#dino {
+	color: #008080;
 }
 
 @media(max-width: 768px) {

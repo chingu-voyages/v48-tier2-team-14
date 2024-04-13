@@ -8,8 +8,10 @@ import Dino from '../../public/dinosaur-placeholder.png'
 
 function List() {
 	const { data, setSelectedDinosaur } = useContext(AppContext);
-	// const [currentPage, setCurrentPage] = useState(1);
-
+	
+  const noDinoImage = "N/A";
+  
+  // const [currentPage, setCurrentPage] = useState(1);
 	// const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
 	// const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
 	// const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
@@ -36,19 +38,19 @@ function List() {
 								onClick={(e) => handleClickItem(dinosaur, e)}
 							>
 								<div className="imageContainer">
-									{dinosaur.imageSrc ? (
-										<img
-											src={dinosaur.imageSrc}
-											className="listImg"
-											alt={`Image of ${dinosaur.name}`}
-										/>
-									) : (
-										<img
-											src="../../public/dinosaur-placeholder.png"
-											className="listImg"
-											alt="Default Image"
-										/>
-									)}
+									{dinosaur.imageSrc === noDinoImage ? (
+													<img
+														className="listImg"
+														src="/dinosaur-placeholder.png"
+														alt={dinosaur.name}
+													/>
+												) : (
+													<img
+														className="listImg"
+														src={dinosaur.imageSrc}
+														alt={dinosaur.name}
+													/>
+												)}
 								</div>
 								<div className="detailsContainer">
 									<h6 className="dinoName">{dinosaur.name}</h6>

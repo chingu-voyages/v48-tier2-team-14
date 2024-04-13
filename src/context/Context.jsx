@@ -22,7 +22,7 @@ const AppProvider = ({ children }) => {
 	const [dinoNews, setDinoNews] = useState();
 	const [matchedItems, setMatchedItems] = useState([]);
 	const [locationCoordinates, setLocationCoordinates] = useState([]);
-	const [selectedDinosaur, setSelectedDinosaur] = useState();
+	const [selectedDinosaur, setSelectedDinosaur] = useState(null);
 
 	//------------------------------------- API CALLS --------------------------------------
 
