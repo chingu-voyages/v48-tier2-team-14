@@ -12,18 +12,10 @@
   padding-bottom: 2rem;
 }
 
-.news-heading,
-.news-intro {
-  text-align: center;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
-
 .news-heading {
   font-family: Montserrat;
   font-size: 54px;
   font-weight: 700;
-  /* line-height: 78px; */
   letter-spacing: 0.02em;
   text-align: left;
 }
