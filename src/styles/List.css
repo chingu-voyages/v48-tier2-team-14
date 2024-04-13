@@ -1,8 +1,19 @@
 ul {
 	list-style: none;
 }
+
+.dinoItemList {
+  height: 1062px; 
+  overflow: scroll;
+}
+
 .dinoItem {
   display: flex;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #d5d5d5;
+  background-color: transparent;
 }
 
 .imageContainer {
@@ -10,14 +21,17 @@ ul {
 }
 
 .listImg {
-  max-width: 85px; /* Adjust image width as needed */
-  max-height: 85px;
-  height: auto; /* Maintain aspect ratio */
+  /* Adjust image width as needed */
+  /* width: 85px; */
+  max-height: 85px; /* Maintain aspect ratio */
+
 }
 
 .detailsContainer {
   display: flex;
   flex-direction: column;
+  text-align: left;
+  outline: 2px solid blue;
 }
 
 .typeLocationContainer {

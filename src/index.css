@@ -22,8 +22,6 @@
 }
 
 .dinasourList {
-	display: flex;
-	flex-direction: column;
 	border-left: 2px solid lightgray;
     border-top-left-radius: 5px;
 	border-right: 2px solid lightgray;
@@ -31,7 +29,6 @@
 	position: absolute;
     top: -45.3rem;
     width: 32.3%;
-	/* height: 168.3vh; */
     height: 1062px;
 }
 

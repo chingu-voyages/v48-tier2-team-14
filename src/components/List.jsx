@@ -27,7 +27,7 @@ function List() {
 					dinosaur lists
 				</h6>
 			</div>
-			<div>
+			<div className="dinoItemList mt-4">
 				<ul>
 					{currentItems.map((dinosaur) => (
 						<li key={dinosaur.id}>
@@ -51,7 +51,7 @@ function List() {
 									)}
 								</div>
 								<div className="detailsContainer">
-									<h4 className="dinoName">{dinosaur.name}</h4>
+									<h6 className="dinoName">{dinosaur.name}</h6>
 									<div className="typeLocationContainer">
 										<p className="dinoType">{dinosaur.typeOfDinosaur}</p>
 										<p className="dinoLocation">{dinosaur.foundIn}</p>
@@ -61,12 +61,12 @@ function List() {
 						</li>
 					))}
 				</ul>
-				<Pagination
-					itemsPerPage={ITEMS_PER_PAGE}
-					totalItems={data.length}
-					paginate={paginate}
-					currentPage={currentPage}
-				/>
+					<Pagination
+						itemsPerPage={ITEMS_PER_PAGE}
+						totalItems={data.length}
+						paginate={paginate}
+						currentPage={currentPage}
+					/>
 			</div>
 		</>
 	);
