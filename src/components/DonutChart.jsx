@@ -26,7 +26,7 @@ const DonutChart = () => {
 				width={450}
 				height={500}
 				data={type}
-				margin={{ top: 0, right: 200, bottom: 150, left: 100 }}
+				margin={{ top: 20, right: 250, bottom: 275, left: 50 }}
 				innerRadius={0.5}
 				padAngle={0.7}
 				cornerRadius={3}

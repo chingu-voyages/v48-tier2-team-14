@@ -46,7 +46,7 @@ function Map() {
 
 	return (
 		<APIProvider apiKey={apiKey}>
-			<div style={{ height: "700px" }}>
+			<div style={{ height: "532px" }}>
 				<DinoMap
 					minZoom={zoom}
 					defaultZoom={zoom}

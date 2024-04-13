@@ -4,17 +4,18 @@ import { AppContext } from "../context/Context";
 import "../styles/List.css";
 import Dino from '../../public/dinosaur-placeholder.png'
 
-const ITEMS_PER_PAGE = 12;
+// const ITEMS_PER_PAGE = 12;
 
 function List() {
 	const { data, setSelectedDinosaur } = useContext(AppContext);
-	const [currentPage, setCurrentPage] = useState(1);
-	const noDinoImage = "N/A";
-
-	const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
-	const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
-	const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+	
+  const noDinoImage = "N/A";
+  
+  // const [currentPage, setCurrentPage] = useState(1);
+	// const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
+	// const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+	// const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+	// const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 	const handleClickItem = (dinosaur, e) => {
 		setSelectedDinosaur(dinosaur);
@@ -28,9 +29,9 @@ function List() {
 					dinosaur lists
 				</h6>
 			</div>
-			<div>
+			<div className="dinoItemList mt-4">
 				<ul>
-					{currentItems.map((dinosaur) => (
+					{data.map((dinosaur) => (
 						<li key={dinosaur.id}>
 							<button
 								className="dinoItem"
@@ -52,7 +53,7 @@ function List() {
 												)}
 								</div>
 								<div className="detailsContainer">
-									<h4 className="dinoName">{dinosaur.name}</h4>
+									<h6 className="dinoName">{dinosaur.name}</h6>
 									<div className="typeLocationContainer">
 										<p className="dinoType">{dinosaur.typeOfDinosaur}</p>
 										<p className="dinoLocation">{dinosaur.foundIn}</p>
@@ -62,12 +63,12 @@ function List() {
 						</li>
 					))}
 				</ul>
-				<Pagination
-					itemsPerPage={ITEMS_PER_PAGE}
-					totalItems={data.length}
-					paginate={paginate}
-					currentPage={currentPage}
-				/>
+					{/* <Pagination
+						itemsPerPage={ITEMS_PER_PAGE}
+						totalItems={data.length}
+						paginate={paginate}
+						currentPage={currentPage}
+					/> */}
 			</div>
 		</>
 	);
