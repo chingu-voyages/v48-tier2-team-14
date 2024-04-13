@@ -68,9 +68,6 @@ function App() {
 				</div>
       </div>
 
-			<div className="col-md-12">
-				<DinosaurNews />
-			</div>
     
       <div className="container">
         <div className="row">
@@ -79,6 +76,9 @@ function App() {
 					</div>
 				</div>
       </div>
+			<div className="col-md-12">
+				<DinosaurNews />
+			</div>
 
       <div>
         <footer className="footer">
