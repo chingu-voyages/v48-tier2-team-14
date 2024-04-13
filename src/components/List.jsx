@@ -4,16 +4,16 @@ import { AppContext } from "../context/Context";
 import "../styles/List.css";
 import Dino from '../../public/dinosaur-placeholder.png'
 
-const ITEMS_PER_PAGE = 12;
+// const ITEMS_PER_PAGE = 12;
 
 function List() {
 	const { data, setSelectedDinosaur } = useContext(AppContext);
-	const [currentPage, setCurrentPage] = useState(1);
+	// const [currentPage, setCurrentPage] = useState(1);
 
-	const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
-	const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
-	const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+	// const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
+	// const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+	// const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+	// const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 	const handleClickItem = (dinosaur, e) => {
 		setSelectedDinosaur(dinosaur);
@@ -29,7 +29,7 @@ function List() {
 			</div>
 			<div className="dinoItemList mt-4">
 				<ul>
-					{currentItems.map((dinosaur) => (
+					{data.map((dinosaur) => (
 						<li key={dinosaur.id}>
 							<button
 								className="dinoItem"
@@ -61,12 +61,12 @@ function List() {
 						</li>
 					))}
 				</ul>
-					<Pagination
+					{/* <Pagination
 						itemsPerPage={ITEMS_PER_PAGE}
 						totalItems={data.length}
 						paginate={paginate}
 						currentPage={currentPage}
-					/>
+					/> */}
 			</div>
 		</>
 	);
