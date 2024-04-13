@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import list from "../../assets/align-justify.svg";
 
 export default function Navbar() {
   return (
@@ -7,13 +8,26 @@ export default function Navbar() {
         <h3>Dino Studio</h3>
       </div>
 
-      <div className="col-md-4 d-inline-flex justify-content-between mt-1 fw-medium cursor-pointer">
-        <a href="#" className="text-decoration-none text-black">Dinosaur Search</a>
-        <a href="#" className="text-decoration-none text-black">News</a>
-        <a href="#" className="text-decoration-none text-black">Contact Us</a>
+      <div
+        className="col-md-4 d-inline-flex justify-content-between mt-1 fw-medium cursor-pointer"
+        id="navbar"
+      >
+        <img src={list} alt="list" id="hamburger-sign" />
+        <a
+          href="#search"
+          className="text-decoration-none text-black"
+          id="search"
+        >
+          Dinosaur Search
+        </a>
+        <a href="#" className="text-decoration-none text-black" id="news">
+          News
+        </a>
+        <a href="#" className="text-decoration-none text-black" id="contact">
+          Contact Us
+        </a>
       </div>
+      <div id="hamburger-sign"></div>
     </div>
   );
 }
-
-
