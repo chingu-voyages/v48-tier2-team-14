@@ -8,9 +8,9 @@ export default function Navbar() {
       </div>
 
       <div className="col-md-4 d-inline-flex justify-content-between mt-1 fw-medium cursor-pointer">
-        <a href="#" className="text-decoration-none text-black">Search dinosaur</a>
+        <a href="#" className="text-decoration-none text-black">Dinosaur Search</a>
         <a href="#" className="text-decoration-none text-black">News</a>
-        <a href="#" className="text-decoration-none text-black">Connect Us</a>
+        <a href="#" className="text-decoration-none text-black">Contact Us</a>
       </div>
     </div>
   );

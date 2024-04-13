@@ -9,6 +9,7 @@ import { data, data2 } from "./data";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
+import Navbar from './components/Navbar';
 import Search from "./components/Search";
 import Map from "./components/Map";
 import List from './components/List'
