@@ -6,7 +6,6 @@ import "./styles/DinosaurNews.css";
 import "./styles/Search.css";
 import "./styles/Navbar.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { data, data2 } from "./data";
 import PieChart from "./components/PieChart";
 import DonutChart from "./components/DonutChart";
 import { AppProvider } from "./context/Context";
@@ -48,14 +47,14 @@ function App() {
         <div className="row mt-4 position-relative">
           <div className="col-md-4 mt-md-0 mt-4 pt-md-2">
             <div className="pie-chart">
-              <PieChart data={data} />
+              <PieChart />
               <div className="borderTop"></div>
             </div>
           </div>
 
           <div className="col-md-4 mt-md-0 mt-5 pt-md-2">
             <div className="donut-chart">
-              <DonutChart data={data2} />
+              <DonutChart />
               <div className="borderTop"></div>
             </div>
           </div>
@@ -79,12 +78,12 @@ function App() {
         <DinosaurNews />
       </div>
 
-			<div className="col-md-12" id='dinoNews'>
-				<DinosaurNews />
-			</div>
+      <div className="col-md-12" id="dinoNews">
+        <DinosaurNews />
+      </div>
 
       <div>
-        <footer className="footer" id='footer'>
+        <footer className="footer" id="footer">
           <Footer />
         </footer>
       </div>
