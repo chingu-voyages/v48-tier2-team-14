@@ -101,7 +101,6 @@ function Search() {
   };
 
   const handleSubmit = () => {
-    //console.log(searchObj);
     searchDinosaurs(searchObj);
   };
 
@@ -132,6 +131,9 @@ function Search() {
       if (event.key === "Escape") {
         clearSearch();
       }
+      if (event.key === "Enter") {
+        handleSubmit();
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -141,84 +143,105 @@ function Search() {
 
   return (
     <>
-      <div className="text-center mb-4">
-        <p className="findAllDino fs-1 fw-bold">Find all <span id="dino">dinosaurs</span></p>
-        <p id="dino-intro">
-          Dive into the captivating world of dinosaurs and uncover their mysteries with our
-          in-depth resources. From the towering giants of the past to the swift predators,
-          immerse yourself in their fascinating journey through time.
-        </p>
-      </div>
-      <div className="row d-inline-flex justify-content-between" id="searchBar">
-        <input
-          placeholder="Search for a dinosuar..."
-          type="text"
-          className="col-md-2 rounded-1 border-0 py-2"
-          value={name}
-          onChange={handleNameChange}
-          onFocus={handleNameFocus}
-        ></input>
-        <input
-          placeholder="Country"
-          type="text"
-          className="col-md-1 rounded-1 border-0 py-2"
-          value={country}
-          onFocus={handleCountryFocus}
-          onChange={handleCountryChange}
-        ></input>
-        <input
-          placeholder="0"
-          className="col-md-1 rounded-1 border-0 py-2"
-          type="number"
-          min="0"
-          max="70000"
-          value={minWeight}
-          onChange={handleMinWeightChange}
-        ></input>
-        <input
-          //placeholder="70000"
-          className="col-md-1 rounded-1 border-0 py-2"
-          type="number"
-          min="0"
-          max="70000"
-          value={maxWeight}
-          onChange={handleMaxWeightChange}
-        ></input>
-        <input
-          placeholder="Diet"
-          type="text"
-          className="col-md-1 rounded-1 border-0 py-2"
-          value={diet}
-          onFocus={handleDietFocus}
-          onChange={handleDietChange}
-        ></input>
-        <input
-          placeholder="0"
-          className="col-md-1 rounded-1 border-0 py-2"
-          type="number"
-          min="0"
-          max="37.5"
-          value={minLength}
-          onChange={handleMinLengthChange}
-        ></input>
-        <input
-          placeholder="37.5"
-          className="col-md-1 rounded-1 border-0 py-2"
-          type="number"
-          min="0"
-          max="37.5"
-          value={maxLength}
-          onChange={handleMaxLengthChange}
-        ></input>
-        <button className="col-md-1 rounded-1 border-0 py-2" id="searchBtn" onClick={handleSubmit}>
-          Search
-        </button>
-        <button className="col-md-1 rounded-1 border-0 bg-white py-2" onClick={clearSearch}>
-          Clear
-        </button>
+      <div id="search-bar">
+        <div className="text-center mb-4" id="sub-heading-p">
+          <p className="findAllDino fs-1 fw-bold">
+            Find all <span id="dino">dinosaurs</span>
+          </p>
+          <p id="dino-intro">
+            Dive into the captivating world of dinosaurs and uncover their
+            mysteries with our in-depth resources. From the towering giants of
+            the past to the swift predators, immerse yourself in their
+            fascinating journey through time.
+          </p>
+        </div>
+
+        <div
+          className="row d-inline-flex justify-content-center"
+          id="topSearch"
+        >
+          <input
+            placeholder="Search for a dinosuar..."
+            type="text"
+            className="col-md-3 rounded-1 border-0 py-2"
+            value={name}
+            onChange={handleNameChange}
+            onFocus={handleNameFocus}
+          ></input>
+          <button
+            className="col-md-1 rounded-1 border-0 py-2"
+            id="searchBtn"
+            onClick={handleSubmit}
+          >
+            Search
+          </button>
+          <button
+            className="col-md-1 rounded-1 border-0 bg-white py-2"
+            id="clearBtn"
+            onClick={clearSearch}
+          >
+            Clear
+          </button>
+        </div>
+        <div
+          className="row d-inline-flex justify-content-between"
+          id="searchBar"
+        >
+          <input
+            placeholder="Country"
+            type="text"
+            className="col-md-1 rounded-1 border-0 py-2"
+            value={country}
+            onFocus={handleCountryFocus}
+            onChange={handleCountryChange}
+          ></input>
+          <input
+            placeholder="0"
+            className="col-md-1 rounded-1 border-0 py-2"
+            type="number"
+            min="0"
+            max="70000"
+            value={minWeight}
+            onChange={handleMinWeightChange}
+          ></input>
+          <input
+            //placeholder="70000"
+            className="col-md-1 rounded-1 border-0 py-2"
+            type="number"
+            min="0"
+            max="70000"
+            value={maxWeight}
+            onChange={handleMaxWeightChange}
+          ></input>
+          <input
+            placeholder="Diet"
+            type="text"
+            className="col-md-1 rounded-1 border-0 py-2"
+            value={diet}
+            onFocus={handleDietFocus}
+            onChange={handleDietChange}
+          ></input>
+          <input
+            placeholder="0"
+            className="col-md-1 rounded-1 border-0 py-2"
+            type="number"
+            min="0"
+            max="37.5"
+            value={minLength}
+            onChange={handleMinLengthChange}
+          ></input>
+          <input
+            placeholder="37.5"
+            className="col-md-1 rounded-1 border-0 py-2"
+            type="number"
+            min="0"
+            max="37.5"
+            value={maxLength}
+            onChange={handleMaxLengthChange}
+          ></input>
+        </div>
       </div>
     </>
   );
-
 }
 export default Search;

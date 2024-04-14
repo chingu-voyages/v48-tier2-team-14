@@ -35,7 +35,6 @@ export const getDinoNews = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error(error);
@@ -43,5 +42,5 @@ export const getDinoNews = async () => {
 };
 
 export const randomiseGeoCoords = (min, max) => {
-	return Math.random() * (max - min) + min;
-}
+  return Math.random() * (max - min) + min;
+};

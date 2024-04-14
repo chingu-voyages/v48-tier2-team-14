@@ -1,5 +1,9 @@
+.popup-text {
+  font-size: 1.25rem;
+}
+
 .popup-img {
-  height: 150px;
+  height: 100px;
   width: auto;
 }
 
@@ -11,21 +15,13 @@
   padding: 1rem;
 }
 
-/* #map-container {
+.popup-container {
   display: flex;
   flex-direction: column;
-  border-left: 2px solid lightgray;
-  border-right: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
-  position: relative;
-} */
+  align-items: center;
+  justify-content: center;
+}
 
-/* #mapBorderTop {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  width: 47.5%;
-  border-top: 2px solid #008080;
-} */
+.popup-container:hover {
+  cursor: pointer;
+}

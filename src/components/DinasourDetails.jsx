@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "../styles/DinasourDetails.css";
-import dinasour from "../../assets/dinasour.jpg";
+// import dinasour from "../../assets/dinasour.jpg";
 import { AppContext } from "../context/Context";
 
 const DinasourDetails = () => {
@@ -12,7 +12,7 @@ const DinasourDetails = () => {
   let tempTaxonomy =
     "Dinosauria, Saurischia, Theropoda, Tyrannosauroidea, Tyrannosauridae, Albertosaurinae";
   let tempTempWhenLived = "Early Jurassic, 199-189 million years ago";
-  const [picture, setPicture] = useState(dinasour);
+  const [picture, setPicture] = useState();
   // info bar details
   const [type, setType] = useState("Large theropod");
   const [weight, setWeight] = useState("1500");
@@ -55,13 +55,13 @@ const DinasourDetails = () => {
 							<span>Type:</span> {selectedDinosaur.typeOfDinosaur}
 						</p>
 						<p>
-							<span>weight:</span> {selectedDinosaur.weight}
+							<span>Weight (kg):</span> {selectedDinosaur.weight}
 						</p>
 						<p>
-							<span>Length:</span> {selectedDinosaur.length}
+							<span>Length (m):</span> {selectedDinosaur.length}
 						</p>
 						<p>
-							<span>FoundIn:</span> {selectedDinosaur.foundIn}
+							<span>Found:</span> {selectedDinosaur.foundIn}
 						</p>
 						<p>
 							<span>Species:</span> {selectedDinosaur.typeSpecies}
@@ -73,13 +73,13 @@ const DinasourDetails = () => {
 							<span>Named By:</span> {selectedDinosaur.namedBy}
 						</p>
 					</div>
-					<button className="save-btn">Save</button>
+					{/* <button className="save-btn">Save</button> */}
 				</aside>
 				<aside className="inner-right-container">
 					<h3 className="section-label text-uppercase py-1">
 						dinasour details
 					</h3>
-					<h3 style={{ marginBottom: "2rem" }}>{name}</h3>
+					<h3 style={{ marginBottom: "2rem" }}>{selectedDinosaur.name}</h3>
 					<h4>Description</h4>
 					<p>{selectedDinosaur.description}</p>
 					<hr />
