@@ -11,13 +11,15 @@ import { AppContext } from "../context/Context";
 function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
-  const zoom = 2;
+  const zoom = 1.75;
   const mapCenter = { lat: 0, lng: 0 };
   const { locationCoordinates, selectedDinosaur, setSelectedDinosaur } =
     useContext(AppContext);
   const [openPopups, setOpenPopups] = useState([]);
   const noDinoImage = "N/A";
   const markerRefs = useRef([]);
+  const [isActive, setIsActive] = useState(false);
+  const [isNewWindow, setIsNewWindow] = useState(false);
 
   useMemo(() => {
     const refs = locationCoordinates.flatMap(({ coordinates }) =>
@@ -31,7 +33,15 @@ function Map() {
   const handleMarkerClick = (index) => {
     setOpenPopups((prevOpenPopups) => {
       const newOpenPopups = [...prevOpenPopups];
-      newOpenPopups[index] = !newOpenPopups[index];
+      newOpenPopups[index] = true;
+
+      for (let i = 0; i < newOpenPopups.length; i++) {
+        if (i !== index) {
+          newOpenPopups[i] = false;
+        }
+      }
+      setIsActive(true);
+      setIsNewWindow(false);
       return newOpenPopups;
     });
   };
@@ -46,6 +56,8 @@ function Map() {
 
   const handleSelectedDinosaur = (dinosaur) => {
     setSelectedDinosaur(dinosaur);
+    setIsActive(!isActive);
+    setIsNewWindow(isActive);
   };
 
   return (
@@ -87,6 +99,11 @@ function Map() {
                       <div
                         className="popup-container"
                         onClick={() => handleSelectedDinosaur(dinosaur)}
+                        style={{
+                          filter: !isActive
+                            ? "drop-shadow(0 0 8px rgba(0, 0, 0, 0.2))"
+                            : "none",
+                        }}
                       >
                         <h3 className="popup-text">{dinosaur.name}</h3>
                         <div className="img-container">
@@ -95,6 +112,7 @@ function Map() {
                               className="popup-img"
                               src="/dinosaur-placeholder.png"
                               alt={dinosaur.name}
+                              style={{ background: "#ffffff", padding: "10px" }}
                             />
                           ) : (
                             <img
