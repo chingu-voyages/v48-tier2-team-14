@@ -16,6 +16,10 @@ ul {
   background-color: transparent;
 }
 
+.dinoItem:active {
+  background-color: #EACA75;
+}
+
 .imageContainer {
   margin-right: 0px; 
 }
