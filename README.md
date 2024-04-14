@@ -71,13 +71,13 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 ## Tech Stack
 <div align="center">
-<img src="https://img.shields.io/badge/react-0D6D8C?style=for-the-badge&logo=react&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Nivo-%23eb8404?style=for-the-badge&logo=nivo
-"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Google_Maps-555555?style=for-the-badge&logo=google-maps&logoColor=ffffff"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/vite-646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"> &nbsp;&nbsp;
+<img alt='react' src="https://img.shields.io/badge/react-0D6D8C?style=for-the-badge&logo=react&logoColor=white"> &nbsp;&nbsp;<img alt='bootstrap' src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/> &nbsp;&nbsp;<img alt='nivo' src="https://img.shields.io/badge/Nivo-%23eb8404?style=for-the-badge&logo=nivo
+"> &nbsp;&nbsp;<img alt='google-maps' src="https://img.shields.io/badge/Google_Maps-555555?style=for-the-badge&logo=google-maps&logoColor=ffffff"> &nbsp;&nbsp;<img alt='vite' src="https://img.shields.io/badge/vite-646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"> &nbsp;&nbsp;
 </div>
 
 ## Tool Kit
 <div align="center">  
-<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Linear.app-%234f52b4?style=for-the-badge&logo=linear
+<img alt='npm' src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img alt='eslint' src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img alt='vscode' src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img alt='git' src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img alt='github' src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img alt='figma' src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img alt='linear' src="https://img.shields.io/badge/Linear.app-%234f52b4?style=for-the-badge&logo=linear
 "> &nbsp;&nbsp;
 </div>
 
@@ -101,7 +101,7 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 ## Acknowledgements
 
-We acknowledge the [National History Museum](https://www.nhm.ac.uk) for providing access to the dataset containing valuable information about dinosaurs. Additionally, we thank [NewsAPI](https://www.newsapi.org) for delivering the latest news on dinosaur discoveries, contributing to our ongoing exploration of this fascinating field.
+We acknowledge the [National History Museum](https://www.nhm.ac.uk) for providing access to the dataset containing valuable information about dinosaurs. Additionally, we thank [GNEWS](https://gnews.io/) for delivering the latest news on dinosaur discoveries, contributing to our ongoing exploration of this fascinating field.
 
 We also thank [N. Style](https://thenounproject.com/creator/n.style_pic) for his dinosaur favicon design, made available--with attribution--from the [The Noun Project](https://thenounproject.com).
 
