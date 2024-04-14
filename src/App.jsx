@@ -69,7 +69,7 @@ function App() {
         </div>
       </div>
 
-      <div className="col-md-12">
+      <div className="col-md-12" id='dinoNews'>
         <DinosaurNews />
       </div>
 
