@@ -1,6 +1,6 @@
-# Dino-Studio
+# Dino Studio
 
-Welcome to the Dino-Studio, an exciting educational app to learn all about dinosaurs! Search our list of dinos, see where in the world they were found, who named them, and read about their habitat, diet, and more. Whether you would like to dive into the latest dinosaur discoveries from around the world or uncover something new about your favorite prehistoric reptile, Dino-Studio is the place to be.
+Welcome to the Dino Studio, an exciting educational app to learn all about dinosaurs! Search our list of dinos, see where in the world they were found, who named them, and read about their habitat, diet, and more. Whether you would like to dive into the latest dinosaur discoveries from around the world or uncover something new about your favorite prehistoric reptile, Dino Studio is the place to be.
 
 
 ## Table of Contents
