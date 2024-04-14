@@ -20,7 +20,13 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 - [About Chingu](#about-chingu)
 
 ## Overview
+![Home-Page](./assets/homePage.png)
 
+![Search-Result](./assets/searchResult.png)
+
+![Dinosaur-Details](./assets/dinoDetail.png)
+
+![News](./assets/newsComponent.png)
 
 ## Functionality
 
@@ -75,17 +81,21 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 #### Designer:
 
-- Farzaneh: [GitHub](https://github.com/farzaneh-falakrou)
+- Farzaneh: [GitHub](https://github.com/farzaneh-falakrou) | [LinkedIn](https://www.linkedin.com/in/farzaneh-falakrou/)
 
 #### Developers:
 
 - Jonah: [GitHub](https://github.com/jonahunuafe)
 
-- Josh: [GitHub](https://github.com/Joshf225)
+- Josh: [GitHub](https://github.com/Joshf225) | [LinkedIn](https://www.linkedin.com/in/joshua-famose-649179247/)
 
-- Rhys: [GitHub](https://github.com/rjmills87)
+- Rhys: [GitHub](https://github.com/rjmills87) | [LinkedIn](https://www.linkedin.com/in/rjmills87/)
 
 - Simon: [GitHub](https://github.com/simonC137)
+
+## Design
+
+![Figma-Design](./assets/Dino-Design.png)
 
 ## Acknowledgements
 
