@@ -71,8 +71,7 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 ## Tech Stack
 <div align="center">
-<img alt='react' src="https://img.shields.io/badge/react-0D6D8C?style=for-the-badge&logo=react&logoColor=white"> &nbsp;&nbsp;<img alt='bootstrap' src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/> &nbsp;&nbsp;<img alt='nivo' src="https://img.shields.io/badge/Nivo-%23eb8404?style=for-the-badge&logo=nivo
-"> &nbsp;&nbsp;<img alt='google-maps' src="https://img.shields.io/badge/Google_Maps-555555?style=for-the-badge&logo=google-maps&logoColor=ffffff"> &nbsp;&nbsp;<img alt='vite' src="https://img.shields.io/badge/vite-646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"> &nbsp;&nbsp;
+<img alt='react' src="https://img.shields.io/badge/react-0D6D8C?style=for-the-badge&logo=react&logoColor=white"> &nbsp;&nbsp;<img alt='bootstrap' src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/> &nbsp;&nbsp;<img alt='nivo' src="https://img.shields.io/badge/Nivo-%23eb8404?style=for-the-badge&logo=nivo"> &nbsp;&nbsp;<img alt='google-maps' src="https://img.shields.io/badge/Google_Maps-555555?style=for-the-badge&logo=google-maps&logoColor=ffffff"> &nbsp;&nbsp;<img alt='vite' src="https://img.shields.io/badge/vite-646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"> &nbsp;&nbsp;
 </div>
 
 ## Tool Kit
