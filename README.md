@@ -20,7 +20,13 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 - [About Chingu](#about-chingu)
 
 ## Overview
+![Home-Page](./assets/homePage.png)
 
+![Search-Result](./assets/searchResult.png)
+
+![Dinosaur-Details](./assets/dinoDetail.png)
+
+![News](./assets/newsComponent.png)
 
 ## Functionality
 
