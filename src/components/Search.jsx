@@ -141,14 +141,18 @@ function Search() {
 
   return (
     <>
-      <div className="text-center mb-4">
-        <p className="findAllDino fs-1 fw-bold">Find all <span id="dino">dinosaurs</span></p>
+      <div className="text-center mb-4" id="sub-heading-p">
+        <p className="findAllDino fs-1 fw-bold">
+          Find all <span id="dino">dinosaurs</span>
+        </p>
         <p id="dino-intro">
-          Dive into the captivating world of dinosaurs and uncover their mysteries with our
-          in-depth resources. From the towering giants of the past to the swift predators,
-          immerse yourself in their fascinating journey through time.
+          Dive into the captivating world of dinosaurs and uncover their
+          mysteries with our in-depth resources. From the towering giants of the
+          past to the swift predators, immerse yourself in their fascinating
+          journey through time.
         </p>
       </div>
+
       <div className='row d-inline-flex justify-content-center' id='topSearch'>
         <input
           placeholder="Search for a dinosuar..."
@@ -219,9 +223,9 @@ function Search() {
           value={maxLength}
           onChange={handleMaxLengthChange}
         ></input>
+
       </div>
     </>
   );
-
 }
 export default Search;
