@@ -13,10 +13,10 @@ function Map() {
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
   const zoom = 2;
   const mapCenter = { lat: 0, lng: 0 };
-  const { locationCoordinates } = useContext(AppContext);
+  const { locationCoordinates, selectedDinosaur, setSelectedDinosaur } =
+    useContext(AppContext);
   const [openPopups, setOpenPopups] = useState([]);
   const noDinoImage = "N/A";
-
   const markerRefs = useRef([]);
 
   useMemo(() => {
@@ -44,6 +44,10 @@ function Map() {
     });
   };
 
+  const handleSelectedDinosaur = (dinosaur) => {
+    setSelectedDinosaur(dinosaur);
+  };
+
   return (
     <APIProvider apiKey={apiKey}>
       <div style={{ height: "532px" }}>
@@ -66,7 +70,9 @@ function Map() {
                     onClick={() => handleMarkerClick(popupIndex)}
                   >
                     <Pin
-                      background={"#008080"}
+                      background={
+                        selectedDinosaur === dinosaur ? "#ffba08" : "#008080"
+                      }
                       glyphColor={"#ffd60a"}
                       borderColor={"#000"}
                     />
@@ -78,21 +84,26 @@ function Map() {
                       height="auto"
                       onCloseClick={() => handleWindowClose(popupIndex)}
                     >
-                      <h3>{dinosaur.name}</h3>
-                      <div className="img-container">
-                        {dinosaur.imageSrc === noDinoImage ? (
-                          <img
-                            className="popup-img"
-                            src="/dinosaur-placeholder.png"
-                            alt={dinosaur.name}
-                          />
-                        ) : (
-                          <img
-                            className="popup-img"
-                            src={dinosaur.imageSrc}
-                            alt={dinosaur.name}
-                          />
-                        )}
+                      <div
+                        className="popup-container"
+                        onClick={() => handleSelectedDinosaur(dinosaur)}
+                      >
+                        <h3 className="popup-text">{dinosaur.name}</h3>
+                        <div className="img-container">
+                          {dinosaur.imageSrc === noDinoImage ? (
+                            <img
+                              className="popup-img"
+                              src="/dinosaur-placeholder.png"
+                              alt={dinosaur.name}
+                            />
+                          ) : (
+                            <img
+                              className="popup-img"
+                              src={dinosaur.imageSrc}
+                              alt={dinosaur.name}
+                            />
+                          )}
+                        </div>
                       </div>
                     </InfoWindow>
                   )}
