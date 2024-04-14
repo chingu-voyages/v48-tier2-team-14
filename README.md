@@ -7,7 +7,7 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 - [Overview](#overview)
 
-- [features](#features)
+- [Features](#features)
 
 - [Design](#design)
 
@@ -77,8 +77,7 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 ## Tool Kit
 <div align="center">  
-<img alt='npm' src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img alt='eslint' src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img alt='vscode' src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img alt='git' src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img alt='github' src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img alt='figma' src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img alt='linear' src="https://img.shields.io/badge/Linear.app-%234f52b4?style=for-the-badge&logo=linear
-"> &nbsp;&nbsp;
+<img alt='npm' src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img alt='eslint' src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img alt='vscode' src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img alt='git' src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img alt='github' src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img alt='figma' src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img alt='linear' src="https://img.shields.io/badge/Linear.app-%234f52b4?style=for-the-badge&logo=linear"> &nbsp;&nbsp;
 </div>
 
 
