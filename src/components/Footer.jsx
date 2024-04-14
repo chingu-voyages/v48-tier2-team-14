@@ -8,7 +8,7 @@ function Footer() {
 				<div className="row overflow-hidden" id="footerContainer">
 					<div className="col-md-3 col-7">
 						<h5 id='brand'>Dino Studio</h5>
-						<p className="mt-3">Copyright &copy; 2024 | <a href='www.chingu.io'>Chingu</a></p>
+						<p className="mt-3" id='copyright'>Copyright &copy; 2024 | <a href='www.chingu.io'>Chingu</a></p>
 					</div>
 					<div className="col-md-2 col-5">
 						<p>Chingu Team 14</p>
