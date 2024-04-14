@@ -9,6 +9,8 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 - [features](#features)
 
+- [Design](#design)
+
 - [Tech Stack](#tech-stack)
 
 - [Tool Kit](#tool-kit)
