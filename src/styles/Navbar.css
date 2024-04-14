@@ -2,7 +2,35 @@
 #hamburger-sign {
   display: none;
 }
+.nav-title {
+  font-family: "Iceland", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
 @media (max-width: 783px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    margin-left: 8rem;
+    margin-top: 2rem;
+    transition: 2s;
+  }
+  .hide {
+    display: none;
+  }
+  .show #show {
+    display: flex;
+  }
   #search,
   #contact,
   #news {
@@ -42,5 +70,8 @@
     align-content: center;
     flex-direction: column;
     width: 100%;
+  }
+  .news-heading {
+    font-size: 2rem;
   }
 }
