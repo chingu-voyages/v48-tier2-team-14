@@ -10,3 +10,8 @@ footer a {
 footer a:hover {
     color: #fd7e14;
 }
+
+#copyright {
+    font-size:x-small;
+    font-family: Poppins;
+}

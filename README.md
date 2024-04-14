@@ -59,10 +59,13 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
   - View full details of a selected dinosaur upon clicking its entry.
   - Details include additional information sourced from the API data such as: name, imageSrc, typeOfDinosaur, length, diet, whenLived, typeSpecies, description, foundIn, taxonomy, namedBy
 
-#### New Component
+#### News
 
 - View news about recent activity related to dinosaurs.
 
+## Design
+
+![Figma-Design](./assets/Dino-Design.png)
 
 ## Tech Stack
 <div align="center">
@@ -93,15 +96,12 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 - Simon: [GitHub](https://github.com/simonC137)
 
-## Design
-
-![Figma-Design](./assets/Dino-Design.png)
 
 ## Acknowledgements
 
 We acknowledge the [National History Museum](https://www.nhm.ac.uk) for providing access to the dataset containing valuable information about dinosaurs. Additionally, we thank [NewsAPI](https://www.newsapi.org) for delivering the latest news on dinosaur discoveries, contributing to our ongoing exploration of this fascinating field.
 
-We also thank [N. Style](https://thenounproject.com/creator/n.style_pic) for his dinosaur favicon design, made available with attribution from the [The Noun Project](https://thenounproject.com).
+We also thank [N. Style](https://thenounproject.com/creator/n.style_pic) for his dinosaur favicon design, made available--with attribution--from the [The Noun Project](https://thenounproject.com).
 
 ## About Chingu
 
