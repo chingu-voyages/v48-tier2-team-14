@@ -7,6 +7,8 @@ Welcome to the Dino-Studio, an exciting educational app to learn all about dinos
 
 - [Overview](#overview)
 
+- [features](#features)
+
 - [Tech Stack](#tech-stack)
 
 - [Tool Kit](#tool-kit)
@@ -18,6 +20,43 @@ Welcome to the Dino-Studio, an exciting educational app to learn all about dinos
 - [About Chingu](#about-chingu)
 
 ## Overview
+
+
+## Functionality
+
+#### General:
+
+  - A single-page application (SPA) or it's equivalent design to provide users with an immersive experience in exploring dinosaurs through a user-friendly interface.
+
+#### Dinosaur Display
+
+  - View dinosaurs' name, weight, length, country, diet and corresponding images sourced from the provided API data.
+  - Each dinosaur entry is clickable to view full details.
+
+#### Search
+
+  - Search for dinosaurs by name, weight, length, country and diet.
+  - Results are displayed across the app, including in the map, list, and chart components.
+
+#### Charts Visualization
+
+  - Two charts (pie chart and doughnut chart) illustrating the distribution of general dinosaur diet and type data.
+  - Charts are visually appealing and informative, providing a clear overview of dinosaur type and diet composition.
+
+#### Dinosaur Location Map
+
+  - View the location of a search dinosaurs on a map.
+  - Select dinosaurs from map pins to learn more.
+
+#### Dinosaur Details View
+
+  - View full details of a selected dinosaur upon clicking its entry.
+  - Details include additional information sourced from the API data such as: name, imageSrc, typeOfDinosaur, length, diet, whenLived, typeSpecies, description, foundIn, taxonomy, namedBy
+
+#### New Component
+
+- View news about recent activity related to dinosaurs.
+
 
 ## Tech Stack
 <div align="center">
