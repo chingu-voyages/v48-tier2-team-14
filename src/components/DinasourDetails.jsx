@@ -55,13 +55,13 @@ const DinasourDetails = () => {
 							<span>Type:</span> {selectedDinosaur.typeOfDinosaur}
 						</p>
 						<p>
-							<span>weight:</span> {selectedDinosaur.weight}
+							<span>Weight (kg):</span> {selectedDinosaur.weight}
 						</p>
 						<p>
-							<span>Length:</span> {selectedDinosaur.length}
+							<span>Length (m):</span> {selectedDinosaur.length}
 						</p>
 						<p>
-							<span>FoundIn:</span> {selectedDinosaur.foundIn}
+							<span>Found:</span> {selectedDinosaur.foundIn}
 						</p>
 						<p>
 							<span>Species:</span> {selectedDinosaur.typeSpecies}
@@ -79,7 +79,7 @@ const DinasourDetails = () => {
 					<h3 className="section-label text-uppercase py-1">
 						dinasour details
 					</h3>
-					<h3 style={{ marginBottom: "2rem" }}>{name}</h3>
+					<h3 style={{ marginBottom: "2rem" }}>{selectedDinosaur.name}</h3>
 					<h4>Description</h4>
 					<p>{selectedDinosaur.description}</p>
 					<hr />

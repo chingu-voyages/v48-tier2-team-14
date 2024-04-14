@@ -24,6 +24,7 @@
   font-size: 1.1rem;
   width: 1010px;
   color: #2a2a2a;
+  text-align: center;
 }
 
 .articles {
@@ -165,5 +166,12 @@
 
   .news-intro {
     margin: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-intro {
+    max-width: 95vw;
+    text-align: center;
   }
 }

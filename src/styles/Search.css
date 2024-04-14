@@ -16,13 +16,17 @@
 #searchBar {
 	/* margin-left: 0.2rem; */
 	/* margin: auto; */
+	width: 100%;
 	filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2));
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 #searchBtn {
 	cursor: pointer;
 	background: #2D9596;
 	color: white;
+	margin: 0px 10px;
 }
 
 #searchBtn:hover {
@@ -30,17 +34,36 @@
 	color: #008080;
 }
 
+#clearBtn:hover {
+	background-color: #008080;
+	color: #2D9596;
+}
+
 .findAllDino {
 	font-family: sans-serif;
 }
 
 #dino-intro {
-	width: 1010px;
+	width: 90%;
+	margin: auto;
 }
 
 #dino {
 	color: #008080;
 }
+
+
+
+#topSearch {
+	width: 100%;
+	/* margin: 0px 15px; */
+	margin-bottom: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+	filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2));
+
+}
+
 
 @media(max-width: 768px) {
 	/* #searchBar {

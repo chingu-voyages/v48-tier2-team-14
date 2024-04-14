@@ -78,8 +78,13 @@ function App() {
       <div className="col-md-12">
         <DinosaurNews />
       </div>
+
+			<div className="col-md-12" id='dinoNews'>
+				<DinosaurNews />
+			</div>
+
       <div>
-        <footer className="footer">
+        <footer className="footer" id='footer'>
           <Footer />
         </footer>
       </div>

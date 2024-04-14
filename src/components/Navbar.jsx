@@ -8,6 +8,7 @@ export default function Navbar() {
         <h3>Dino Studio</h3>
       </div>
 
+
       <div
         className="col-md-4 d-inline-flex justify-content-between mt-1 fw-medium cursor-pointer"
         id="navbar"
@@ -20,12 +21,13 @@ export default function Navbar() {
         >
           Dinosaur Search
         </a>
-        <a href="#" className="text-decoration-none text-black" id="news">
+        <a href="#dinoNews" className="text-decoration-none text-black" id="news">
           News
         </a>
-        <a href="#" className="text-decoration-none text-black" id="contact">
+        <a href="#footer" className="text-decoration-none text-black" id="contact">
           Contact Us
         </a>
+
       </div>
       <div id="hamburger-sign"></div>
     </div>
