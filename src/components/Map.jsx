@@ -11,7 +11,7 @@ import { AppContext } from "../context/Context";
 function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
-  const zoom = 2;
+  const zoom = 1.75;
   const mapCenter = { lat: 0, lng: 0 };
   const { locationCoordinates, selectedDinosaur, setSelectedDinosaur } =
     useContext(AppContext);
@@ -112,6 +112,7 @@ function Map() {
                               className="popup-img"
                               src="/dinosaur-placeholder.png"
                               alt={dinosaur.name}
+                              style={{ background: "#ffffff", padding: "10px" }}
                             />
                           ) : (
                             <img
