@@ -7,6 +7,10 @@ ul {
   overflow: scroll;
 }
 
+.dinoItemList ul {
+  padding-left: 0px;
+}
+
 .dinoItem {
   display: flex;
   border-top: none;
