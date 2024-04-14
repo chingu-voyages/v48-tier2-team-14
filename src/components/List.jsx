@@ -3,23 +3,14 @@ import Pagination from "./Pagination";
 import { AppContext } from "../context/Context";
 import "../styles/List.css";
 
-// const ITEMS_PER_PAGE = 12;
-
 function List() {
+  
   const { data, setSelectedDinosaur, setMatchedItems } = useContext(AppContext);
-
   const noDinoImage = "N/A";
-
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
-  // const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
-  // const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+  
   const handleClickItem = (dinosaur, e) => {
     setSelectedDinosaur(dinosaur);
     setMatchedItems([dinosaur]);
-    console.log(dinosaur);
   };
 
   return (
@@ -63,12 +54,6 @@ function List() {
             </li>
           ))}
         </ul>
-        {/* <Pagination
-						itemsPerPage={ITEMS_PER_PAGE}
-						totalItems={data.length}
-						paginate={paginate}
-						currentPage={currentPage}
-					/> */}
       </div>
     </>
   );

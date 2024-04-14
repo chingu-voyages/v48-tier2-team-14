@@ -7,12 +7,10 @@ const PieChart = () => {
 
   //click method
   const handleClick = (slice) => {
-    console.log("Slice clicked", slice);
     const clickedId = slice.id;
     const filteredChart = data.filter(
       (dinosaur) => dinosaur.diet === clickedId
     );
-    console.log(filteredChart);
     setData(filteredChart);
     setMatchedItems(filteredChart);
   };
