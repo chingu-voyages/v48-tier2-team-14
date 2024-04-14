@@ -7,8 +7,10 @@ function Footer() {
 			<footer>
 				<div className="row overflow-hidden" id="footerContainer">
 					<div className="col-md-3 col-7">
-						<h5 id='brand'>Dino Studio</h5>
-						<p className="mt-3" id='copyright'>Copyright &copy; 2024 | <a href='www.chingu.io'>Chingu</a></p>
+						<h5 id="brand">Dino Studio</h5>
+						<p className="mt-3" id="copyright">
+							Copyright &copy; 2024 | <a href="www.chingu.io">Chingu</a>
+						</p>
 					</div>
 					<div className="col-md-2 col-5">
 						<p>Chingu Team 14</p>
@@ -46,7 +48,7 @@ function Footer() {
 								<a href="https://github.com/franeCode">Ana</a>
 							</p>
 							<p>
-								<a href="https://github.com/farzaneh-falakrou">Fari</a>
+								<a href="https://github.com/farzaneh-falakrou">Farzaneh</a>
 							</p>
 						</div>
 					</div>
