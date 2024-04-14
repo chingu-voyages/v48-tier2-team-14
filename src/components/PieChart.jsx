@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const PieChart = () => {
-  const { diet, data, setData } = useContext(AppContext);
+  const { diet, data, setData, setMatchedItems } = useContext(AppContext);
 
   //click method
   const handleClick = (slice) => {
@@ -12,6 +12,7 @@ const PieChart = () => {
       (dinosaur) => dinosaur.diet === clickedId
     );
     setData(filteredChart);
+    setMatchedItems(filteredChart);
   };
 
   return (

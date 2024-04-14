@@ -131,6 +131,9 @@ function Search() {
       if (event.key === "Escape") {
         clearSearch();
       }
+      if (event.key === "Enter") {
+        handleSubmit();
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => {

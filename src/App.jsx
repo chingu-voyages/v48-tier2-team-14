@@ -74,9 +74,6 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="col-md-12">
-        <DinosaurNews />
-      </div>
 
       <div className="col-md-12" id="dinoNews">
         <DinosaurNews />

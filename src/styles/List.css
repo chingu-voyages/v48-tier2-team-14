@@ -7,6 +7,10 @@ ul {
   overflow: scroll;
 }
 
+.dinoItemList ul {
+  padding-left: 0px;
+}
+
 .dinoItem {
   display: flex;
   border-top: none;
@@ -14,6 +18,10 @@ ul {
   border-right: none;
   border-bottom-color: #d5d5d5;
   background-color: transparent;
+}
+
+.dinoItem:active {
+  background-color: #edfafa;
 }
 
 .imageContainer {

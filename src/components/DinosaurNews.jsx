@@ -7,7 +7,7 @@ export default function DinosaurNews() {
   const [btnText, setBtnText] = useState("View all");
 
   return (
-    <div className="news-container mt-5" id="dinoNews">
+    <div className="news-container mt-5">
       <div id="styled-container">
         <h2 className="news-heading mt-4">Latest News</h2>
         <p className="news-intro mb-4 text-center">

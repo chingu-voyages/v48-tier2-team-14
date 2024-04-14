@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "../styles/DinasourDetails.css";
-import dinasour from "../../assets/dinasour.jpg";
+// import dinasour from "../../assets/dinasour.jpg";
 import { AppContext } from "../context/Context";
 
 const DinasourDetails = () => {
@@ -12,7 +12,7 @@ const DinasourDetails = () => {
   let tempTaxonomy =
     "Dinosauria, Saurischia, Theropoda, Tyrannosauroidea, Tyrannosauridae, Albertosaurinae";
   let tempTempWhenLived = "Early Jurassic, 199-189 million years ago";
-  const [picture, setPicture] = useState(dinasour);
+  const [picture, setPicture] = useState();
   // info bar details
   const [type, setType] = useState("Large theropod");
   const [weight, setWeight] = useState("1500");
@@ -73,7 +73,7 @@ const DinasourDetails = () => {
 							<span>Named By:</span> {selectedDinosaur.namedBy}
 						</p>
 					</div>
-					<button className="save-btn">Save</button>
+					{/* <button className="save-btn">Save</button> */}
 				</aside>
 				<aside className="inner-right-container">
 					<h3 className="section-label text-uppercase py-1">

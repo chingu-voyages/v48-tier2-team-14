@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/Context";
 
 const DonutChart = () => {
-  const { type, data, setData } = useContext(AppContext);
+
+  const { type, data, setData, setMatchedItems } = useContext(AppContext);
 
   const handleClick = (slice) => {
     const clickedId = slice.id;
@@ -11,6 +12,7 @@ const DonutChart = () => {
       (dinosaur) => dinosaur.typeOfDinosaur === clickedId
     );
     setData(filteredChart);
+    setMatchedItems(filteredChart);
   };
 
   return (
