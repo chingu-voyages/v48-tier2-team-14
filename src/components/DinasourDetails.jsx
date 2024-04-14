@@ -73,7 +73,7 @@ const DinasourDetails = () => {
 							<span>Named By:</span> {selectedDinosaur.namedBy}
 						</p>
 					</div>
-					<button className="save-btn">Save</button>
+					{/* <button className="save-btn">Save</button> */}
 				</aside>
 				<aside className="inner-right-container">
 					<h3 className="section-label text-uppercase py-1">

@@ -132,7 +132,7 @@ function Search() {
       if (event.key === "Escape") {
         clearSearch();
       }
-      if (event.key === 'Enter') {
+      if (event.key === "Enter") {
         handleSubmit();
       }
     };
