@@ -2,6 +2,16 @@
 #hamburger-sign {
   display: none;
 }
+.nav-title {
+  font-family: "Iceland", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 
 @media (max-width: 783px) {
   .links {

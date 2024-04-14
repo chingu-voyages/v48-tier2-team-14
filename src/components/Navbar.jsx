@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="row mt-3 mb-2">
       <div className="col-md-8">
-        <h3>Dino Studio</h3>
+        <h3 className="nav-title">Dino Studio</h3>
       </div>
 
       <div
@@ -19,7 +19,7 @@ export default function Navbar() {
         <img src={list} alt="list" id="hamburger-sign" onClick={handleClick} />
         <div className="links">
           <a
-            href="#search"
+            href="#search-bar"
             className="text-decoration-none text-black"
             id={active ? "search" : "hide"}
           >

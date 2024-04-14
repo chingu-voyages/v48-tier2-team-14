@@ -141,7 +141,7 @@ function Search() {
 
   return (
     <>
-      <div id="search">
+      <div id="search-bar">
         <div className="text-center mb-4" id="sub-heading-p">
           <p className="findAllDino fs-1 fw-bold">
             Find all <span id="dino">dinosaurs</span>
