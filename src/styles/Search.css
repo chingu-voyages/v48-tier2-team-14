@@ -44,9 +44,8 @@
 }
 
 #dino-intro {
-	width: 100%;
-	padding-left: 30px;
-	padding-right: 30px;
+	width: 90%;
+	margin: auto;
 }
 
 #dino {
