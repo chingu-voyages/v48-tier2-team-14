@@ -12,7 +12,7 @@ function Map() {
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
   const zoom = 1.75;
-  const mapCenter = { lat: 0, lng: 0 };
+  const mapCenter = { lat: 20, lng: 10 };
   const { locationCoordinates, selectedDinosaur, setSelectedDinosaur } =
     useContext(AppContext);
   const [openPopups, setOpenPopups] = useState([]);
