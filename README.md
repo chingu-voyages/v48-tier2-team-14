@@ -94,7 +94,7 @@ Welcome to the Dino Studio, an exciting educational app to learn all about dinos
 
 - Rhys: [GitHub](https://github.com/rjmills87) | [LinkedIn](https://www.linkedin.com/in/rjmills87/)
 
-- Simon: [GitHub](https://github.com/simonC137)
+- Simon: [GitHub](https://github.com/simonC137) | [LinkedIn](https://www.linkedin.com/in/simonsummers/)
 
 
 ## Acknowledgements
